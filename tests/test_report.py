@@ -69,3 +69,24 @@ def test_summary_table_has_one_row_per_result():
     table = summary_table([first, second])
     assert table.count("| crossner_ai |") == 2
     assert "| large |" in table and "40.0" in table
+
+
+def test_markdown_says_na_when_no_type_has_enough_support():
+    from labelsweep.report import markdown
+
+    res = _res({"x": [("x", 1.0, 1.0), ("X", 0.0, 0.0)]}, {"x": 4})
+    res.update(
+        meta={},
+        best_labels={"x": "x"},
+        n_dev=1,
+        n_test=1,
+        n_label_sets=2,
+        test_gain_ci95=[0, 0],
+        test={
+            "default": {"micro_f1": 1, "macro_f1": 1},
+            "best": {"micro_f1": 1, "macro_f1": 1},
+        },
+        dev={"default": {"micro_f1": 1}, "best": {"micro_f1": 1}},
+    )
+    text = markdown(res)
+    assert "n/a" in text and "Median per-type spread: **0.0**" not in text

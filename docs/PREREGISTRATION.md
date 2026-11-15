@@ -31,4 +31,5 @@ Changes after this point are logged at the bottom with date and reason.
 - GLiNER v2.1 may have seen similar label strings in training (Golde et al., 2025, "Familiarity").
 
 ## Change log
-- (none yet)
+- 2026-11-14: noise floor checked, not assumed. An independent re-run of crossner_ai x gliner_small-v2.1
+  (started by hand, GPU shared with the grid) reproduced every score exactly; only wall time differed.

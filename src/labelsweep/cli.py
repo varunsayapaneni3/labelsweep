@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import glob
 import json
 import platform
 import sys
@@ -46,16 +47,56 @@ def _versions() -> dict:
     return out
 
 
+def _err(msg: str) -> int:
+    print(f"error: {msg}", file=sys.stderr)
+    return 2
+
+
+def expand_paths(patterns: list[str]) -> list[str]:
+    """Expand globs and directories ourselves: PowerShell and cmd pass `*.json` through literally."""
+    out: list[str] = []
+    for p in patterns:
+        if Path(p).is_dir():
+            out += sorted(str(x) for x in Path(p).glob("*.json"))
+        elif glob.has_magic(p):
+            out += sorted(glob.glob(p))
+        elif Path(p).exists():
+            out.append(p)
+    return out
+
+
+def _default_out(args) -> Path:
+    stem = Path(args.data.split(",")[0]).stem if "," in args.data else args.data
+    return Path(f"results/{stem}__{args.model.replace('/', '__')}.json")
+
+
 def cmd_run(args) -> int:
     labels_spec = args.labels or (
         f"preset:{args.data}" if args.data in list_presets() else None
     )
     if not labels_spec:
-        print(
-            "error: --labels is required (no bundled preset for this data)",
-            file=sys.stderr,
+        return _err(
+            "--labels is required (no bundled preset for this data); see examples/labels.yaml"
         )
-        return 2
+    if not labels_spec.startswith("preset:") and not Path(labels_spec).is_file():
+        return _err(
+            f"labels file not found: {labels_spec} (try examples/labels.yaml or preset:<name>)"
+        )
+    if "," in args.data:
+        for p in args.data.split(",", 1):
+            if not Path(p).is_file():
+                return _err(
+                    f"data file not found: {p} (expected DEV.jsonl,TEST.jsonl; try examples/)"
+                )
+    elif args.data not in BENCHMARKS:
+        return _err(
+            f"unknown dataset {args.data!r}; use one of {', '.join(BENCHMARKS)} or DEV.jsonl,TEST.jsonl"
+        )
+    out = Path(args.out) if args.out else _default_out(args)
+    if out.exists() and not args.force:
+        return _err(
+            f"{out} exists; pass --force to overwrite or --out to write elsewhere"
+        )
     candidates = load_labels(labels_spec, auto=args.auto)
     dev, test = _load_data(args.data, args.dev_limit, args.test_limit)
     n_sets = 1 + sum(len(v) - 1 for v in candidates.values())
@@ -92,7 +133,6 @@ def cmd_run(args) -> int:
         "versions": _versions(),
     }
     res = to_dict(r)
-    out = Path(args.out or f"results/{args.data}__{args.model.replace('/', '__')}.json")
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(res, indent=2), encoding="utf-8")
     print(markdown(res))
@@ -101,7 +141,10 @@ def cmd_run(args) -> int:
 
 
 def cmd_report(args) -> int:
-    results = [json.loads(Path(p).read_text(encoding="utf-8")) for p in args.results]
+    paths = expand_paths(args.results)
+    if not paths:
+        return _err(f"no result files match {' '.join(args.results)}")
+    results = [json.loads(Path(p).read_text(encoding="utf-8")) for p in paths]
     if args.summary:
         print(summary_table(results, args.min_support))
         return 0
@@ -139,10 +182,17 @@ def main(argv: list[str] | None = None) -> int:
     r.add_argument("--test-limit", type=int)
     r.add_argument("--bootstrap", type=int, default=1000)
     r.add_argument("--out")
+    r.add_argument(
+        "--force", action="store_true", help="overwrite an existing result file"
+    )
     r.set_defaults(fn=cmd_run)
 
     p = sub.add_parser("report", help="print Markdown tables for result JSON files")
-    p.add_argument("results", nargs="+")
+    p.add_argument(
+        "results",
+        nargs="+",
+        help="result JSON files, globs (results/*.json) or a directory",
+    )
     p.add_argument("--summary", action="store_true", help="one row per result file")
     p.add_argument(
         "--min-support",

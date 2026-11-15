@@ -1,0 +1,6 @@
+{"tokens": ["Ada", "Lovelace", "worked", "with", "Charles", "Babbage", "in", "London", "."], "spans": [[0, 2, "person"], [4, 6, "person"], [7, 8, "city"]]}
+{"tokens": ["Grace", "Hopper", "joined", "the", "US", "Navy", "and", "later", "Remington", "Rand", "."], "spans": [[0, 2, "person"], [4, 6, "organization"], [8, 10, "organization"]]}
+{"tokens": ["The", "Python", "Software", "Foundation", "is", "based", "in", "Wilmington", "."], "spans": [[1, 4, "organization"], [7, 8, "city"]]}
+{"tokens": ["Alan", "Turing", "studied", "at", "Cambridge", "before", "moving", "to", "Manchester", "."], "spans": [[0, 2, "person"], [4, 5, "city"], [8, 9, "city"]]}
+{"tokens": ["Mozilla", "released", "Rust", ",", "a", "language", "first", "designed", "by", "Graydon", "Hoare", "."], "spans": [[0, 1, "organization"], [2, 3, "programming language"], [9, 11, "person"]]}
+{"tokens": ["Guido", "van", "Rossum", "created", "Python", "while", "working", "at", "CWI", "in", "Amsterdam", "."], "spans": [[0, 3, "person"], [4, 5, "programming language"], [8, 9, "organization"], [10, 11, "city"]]}

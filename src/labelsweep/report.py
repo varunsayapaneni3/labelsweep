@@ -118,9 +118,14 @@ def markdown(res: dict, min_support: int = 30) -> str:
     sm = summarize(res, min_support)
     lines += [
         "",
-        f"- Types with >= {min_support} test spans: {len(sm['types_used'])}/{len(res['per_type'])}. "
-        f"Median per-type spread: **{_pct(sm['median_spread'])}** F1 points (max {_pct(sm['max_spread'])}); "
-        f"from casing/plural alone: **{_pct(sm['median_trivial_spread'])}**.",
+        (
+            f"- Types with >= {min_support} test spans: {len(sm['types_used'])}/{len(res['per_type'])}. "
+            f"Median per-type spread: **{_pct(sm['median_spread'])}** F1 points (max {_pct(sm['max_spread'])}); "
+            f"from casing/plural alone: **{_pct(sm['median_trivial_spread'])}**."
+            if sm["types_used"]
+            else f"- Median per-type spread: n/a (no type has >= {min_support} test spans; "
+            "lower --min-support to see small-sample numbers, which are noisy)."
+        ),
         f"- Micro-F1 range over all single-type rewordings: {_pct(sm['micro_range'])} points.",
         f"- Micro-F1 on test: default **{_pct(td['micro_f1'])}** -> dev-chosen labels **{_pct(tb['micro_f1'])}** "
         f"(gain {_pct(tb['micro_f1'] - td['micro_f1'])}, paired bootstrap 95% CI [{_pct(lo)}, {_pct(hi)}]).",

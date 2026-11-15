@@ -81,3 +81,96 @@ def test_every_bundled_preset_is_valid():
     assert "crossner_ai" in names
     for n in names:
         validate_candidates(load_labels(f"preset:{n}"))
+
+
+def test_report_expands_globs_itself_for_powershell(files, monkeypatch, capsys):
+    d, gold = files
+    monkeypatch.setattr(
+        cli, "make_predictor", lambda args: Perfect(gold, {"city": "city"})
+    )
+    for name in ("a", "b"):
+        cli.main(
+            [
+                "run",
+                f"{d / 'dev.jsonl'},{d / 'test.jsonl'}",
+                "--labels",
+                str(d / "labels.yaml"),
+                "--model",
+                "fake",
+                "--out",
+                str(d / "res" / f"{name}.json"),
+            ]
+        )
+    capsys.readouterr()
+    # PowerShell passes the pattern through unexpanded; a directory also works
+    assert cli.main(["report", str(d / "res" / "*.json"), "--summary"]) == 0
+    assert capsys.readouterr().out.count("| city |") == 0  # summary rows are per result
+    assert cli.main(["report", str(d / "res"), "--summary"]) == 0
+    out = capsys.readouterr().out
+    assert (
+        sum(line.startswith("| ") for line in out.splitlines()) == 3
+    )  # header + 2 result rows
+
+
+def test_report_with_no_matches_is_a_clean_error(tmp_path, capsys):
+    assert cli.main(["report", str(tmp_path / "nothing" / "*.json")]) == 2
+    assert "no result files" in capsys.readouterr().err
+
+
+def test_run_missing_files_give_clean_errors_before_loading_a_model(
+    files, monkeypatch, capsys
+):
+    d, _ = files
+    monkeypatch.setattr(
+        cli, "make_predictor", lambda args: pytest.fail("model should not load")
+    )
+    assert (
+        cli.main(
+            [
+                "run",
+                f"{d / 'dev.jsonl'},{d / 'test.jsonl'}",
+                "--labels",
+                "my_labels.yaml",
+            ]
+        )
+        == 2
+    )
+    assert "labels file not found: my_labels.yaml" in capsys.readouterr().err
+    assert (
+        cli.main(["run", "dev.jsonl,test.jsonl", "--labels", str(d / "labels.yaml")])
+        == 2
+    )
+    assert "data file not found: dev.jsonl" in capsys.readouterr().err
+
+
+def test_run_refuses_to_overwrite_without_force(files, monkeypatch, capsys):
+    d, gold = files
+    monkeypatch.setattr(
+        cli, "make_predictor", lambda args: Perfect(gold, {"city": "city"})
+    )
+    out = d / "r.json"
+    out.write_text("{}", encoding="utf-8")
+    argv = [
+        "run",
+        f"{d / 'dev.jsonl'},{d / 'test.jsonl'}",
+        "--labels",
+        str(d / "labels.yaml"),
+        "--out",
+        str(out),
+    ]
+    assert cli.main(argv) == 2
+    assert "--force" in capsys.readouterr().err
+    assert cli.main([*argv, "--force"]) == 0
+
+
+def test_bundled_example_runs():
+    from pathlib import Path
+
+    ex = Path(__file__).resolve().parents[1] / "examples"
+    c = load_labels(str(ex / "labels.yaml"), auto=True)
+    validate_candidates(c)
+    from labelsweep.data import load_jsonl
+
+    for split in ("dev", "test"):
+        rows = load_jsonl(ex / f"{split}.jsonl")
+        assert rows and all(t in c for r in rows for *_, t in r.spans)

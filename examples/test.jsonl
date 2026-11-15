@@ -1,0 +1,6 @@
+{"tokens": ["Dennis", "Ritchie", "developed", "C", "at", "Bell", "Labs", "in", "Murray", "Hill", "."], "spans": [[0, 2, "person"], [3, 4, "programming language"], [5, 7, "organization"], [8, 10, "city"]]}
+{"tokens": ["Barbara", "Liskov", "taught", "at", "MIT", "in", "Cambridge", "for", "decades", "."], "spans": [[0, 2, "person"], [4, 5, "organization"], [6, 7, "city"]]}
+{"tokens": ["James", "Gosling", "designed", "Java", "at", "Sun", "Microsystems", "."], "spans": [[0, 2, "person"], [3, 4, "programming language"], [5, 7, "organization"]]}
+{"tokens": ["Margaret", "Hamilton", "led", "software", "work", "at", "NASA", "in", "Houston", "."], "spans": [[0, 2, "person"], [6, 7, "organization"], [8, 9, "city"]]}
+{"tokens": ["Bjarne", "Stroustrup", "built", "C++", "at", "AT&T", "in", "Murray", "Hill", "."], "spans": [[0, 2, "person"], [3, 4, "programming language"], [5, 6, "organization"], [7, 9, "city"]]}
+{"tokens": ["Yukihiro", "Matsumoto", "released", "Ruby", "in", "Japan", "in", "1995", "."], "spans": [[0, 2, "person"], [3, 4, "programming language"]]}

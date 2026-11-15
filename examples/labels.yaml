@@ -1,0 +1,6 @@
+# Example label file: gold type -> candidate wordings (first = default).
+# A type with a single wording is expanded by --auto (lowercase, Title Case, plural, "<x> name").
+person: [person]
+organization: [organization, company, institution]
+city: [city, town, place]
+programming language: [programming language, coding language, language]

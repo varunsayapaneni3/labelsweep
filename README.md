@@ -26,10 +26,11 @@ pip install "labelsweep[gliner]"   # from source for now: pip install -e ".[glin
 ```bash
 labelsweep presets                                  # bundled benchmarks + label presets
 labelsweep run crossner_ai --model urchade/gliner_small-v2.1
-labelsweep run dev.jsonl,test.jsonl --labels my_labels.yaml --auto
-labelsweep report results/*.json --summary          # one row per dataset x model
+labelsweep run examples/dev.jsonl,examples/test.jsonl --labels examples/labels.yaml --auto
+labelsweep report results/*.json --summary          # one row per dataset x model (globs work in PowerShell too)
 ```
 
+`run` will not overwrite an existing result file unless you pass `--force`.
 On Windows, if Application Control blocks the `labelsweep.exe` shim, use `python -m labelsweep ...`.
 
 Label file (YAML; first wording = your default). With `--auto`, a type that lists a single wording is
