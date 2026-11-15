@@ -33,3 +33,7 @@ Changes after this point are logged at the bottom with date and reason.
 ## Change log
 - 2026-11-14: noise floor checked, not assumed. An independent re-run of crossner_ai x gliner_small-v2.1
   (started by hand, GPU shared with the grid) reproduced every score exactly; only wall time differed.
+- 2026-11-14: aggregation rules for H2-H4 were not stated above. Added in PROJECT_PLAN.md section 4 after
+  16 of 18 runs had completed (deviation, disclosed): H2 supported if test gain < dev gain and the CI
+  includes 0 in >= 10 of 18 runs; H3 if small > medium > large on >= 4 of 6 datasets; H4 if casing/plural
+  spread >= 2 points in >= 15 of 18 runs. Raw numbers are reported next to each verdict.

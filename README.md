@@ -73,6 +73,12 @@ RESULTS_PENDING
 
 GLiNER2 and NuNER backends; LLM-generated paraphrases; type descriptions; does fine-tuning remove wording sensitivity?
 
+## Documentation
+
+- [Project plan](docs/PROJECT_PLAN.md): scope, phases, deliverables, risks, backlog
+- [Implementation](docs/IMPLEMENTATION.md): architecture, algorithm, metrics, CLI reference, extending
+- [Pre-registration](docs/PREREGISTRATION.md): hypotheses fixed before the full run, with change log
+
 ## License
 
 MIT
