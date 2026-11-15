@@ -77,3 +77,13 @@ def test_paired_bootstrap_ci_contains_true_difference():
     b = [(1, 0, 0)] * 100
     lo, hi = paired_bootstrap(a, b, reps=500, seed=0)
     assert lo > 0 and hi <= 1.0
+
+
+def test_pluralize_handles_y_es_and_adjectives():
+    from labelsweep.sweep import pluralize
+
+    assert pluralize("country") == "countries"
+    assert pluralize("academic journal") == "academic journals"
+    assert pluralize("class") == "classes"
+    assert pluralize("day") == "days"
+    assert pluralize("miscellaneous") is None

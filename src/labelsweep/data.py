@@ -83,6 +83,13 @@ def _cache_dir() -> Path:
     return d
 
 
+def _tag_column(columns) -> str:
+    for c in ("ner_tags", "tags"):
+        if c in columns:
+            return c
+    raise KeyError(f"no BIO tag column (ner_tags/tags) in {list(columns)}")
+
+
 def _tag_names(dataset: str, config: str) -> list[str]:
     info = json.loads(
         _get(
@@ -90,7 +97,7 @@ def _tag_names(dataset: str, config: str) -> list[str]:
         )
     )
     feats = info["dataset_info"]["features"]
-    tags = feats["ner_tags"]
+    tags = feats[_tag_column(feats)]
     inner = tags.get("feature") or tags.get("sequence") or tags
     if "names" in inner:
         return list(inner["names"])
@@ -121,9 +128,10 @@ def load_hf(
         )
         if not local.exists():
             local.write_bytes(_get(url))
-        table = pq.read_table(local, columns=["tokens", "ner_tags"]).to_pylist()
-        for row in table:
-            tags = [names[t] for t in row["ner_tags"]]
+        pf = pq.ParquetFile(local)
+        col = _tag_column(pf.schema_arrow.names)
+        for row in pf.read(columns=["tokens", col]).to_pylist():
+            tags = [names[t] for t in row[col]]
             examples.append(Example(list(row["tokens"]), bio_to_spans(tags)))
     return examples
 

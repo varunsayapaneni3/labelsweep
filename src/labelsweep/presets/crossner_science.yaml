@@ -1,0 +1,110 @@
+# labelsweep preset: gold type -> candidate wordings (first = default).
+# Pre-registered 2026-11-14 before any model was run on this dataset (scripts/make_presets.py).
+# Per type: natural default, 2 hand-written alternatives, raw dataset tag (if different), casing, plural.
+misc:
+- miscellaneous
+- other entity
+- named entity
+- misc
+- Miscellaneous
+scientist:
+- scientist
+- researcher
+- scholar
+- Scientist
+- scientists
+astronomicalobject:
+- astronomical object
+- celestial body
+- planet or star
+- astronomicalobject
+- Astronomical Object
+- astronomical objects
+organisation:
+- organization
+- company
+- institution
+- organisation
+- Organization
+- organizations
+person:
+- person
+- person name
+- human
+- Person
+- persons
+academicjournal:
+- academic journal
+- scientific journal
+- journal
+- academicjournal
+- Academic Journal
+- academic journals
+location:
+- location
+- place
+- geographic location
+- Location
+- locations
+chemicalcompound:
+- chemical compound
+- compound
+- chemical substance
+- chemicalcompound
+- Chemical Compound
+- chemical compounds
+protein:
+- protein
+- gene product
+- biomolecule
+- Protein
+- proteins
+award:
+- award
+- prize
+- honor
+- Award
+- awards
+university:
+- university
+- college
+- academic institution
+- University
+- universities
+chemicalelement:
+- chemical element
+- element
+- periodic table element
+- chemicalelement
+- Chemical Element
+- chemical elements
+enzyme:
+- enzyme
+- biological catalyst
+- protein enzyme
+- Enzyme
+- enzymes
+discipline:
+- discipline
+- academic discipline
+- scientific field
+- Discipline
+- disciplines
+event:
+- event
+- historical event
+- occurrence
+- Event
+- events
+country:
+- country
+- nation
+- sovereign state
+- Country
+- countries
+theory:
+- theory
+- scientific theory
+- hypothesis
+- Theory
+- theories

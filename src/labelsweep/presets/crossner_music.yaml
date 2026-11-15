@@ -1,0 +1,84 @@
+# labelsweep preset: gold type -> candidate wordings (first = default).
+# Pre-registered 2026-11-14 before any model was run on this dataset (scripts/make_presets.py).
+# Per type: natural default, 2 hand-written alternatives, raw dataset tag (if different), casing, plural.
+musicalartist:
+- musical artist
+- musician
+- singer
+- musicalartist
+- Musical Artist
+- musical artists
+musicgenre:
+- music genre
+- musical style
+- genre of music
+- musicgenre
+- Music Genre
+- music genres
+band:
+- band
+- music group
+- musical band
+- Band
+- bands
+location:
+- location
+- place
+- geographic location
+- Location
+- locations
+album:
+- album
+- music album
+- record
+- Album
+- albums
+award:
+- award
+- prize
+- honor
+- Award
+- awards
+song:
+- song
+- track
+- single
+- Song
+- songs
+organisation:
+- organization
+- company
+- institution
+- organisation
+- Organization
+- organizations
+misc:
+- miscellaneous
+- other entity
+- named entity
+- misc
+- Miscellaneous
+country:
+- country
+- nation
+- sovereign state
+- Country
+- countries
+person:
+- person
+- person name
+- human
+- Person
+- persons
+event:
+- event
+- historical event
+- occurrence
+- Event
+- events
+musicalinstrument:
+- musical instrument
+- instrument
+- musicalinstrument
+- Musical Instrument
+- musical instruments

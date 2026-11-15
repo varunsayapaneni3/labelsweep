@@ -1,0 +1,77 @@
+# labelsweep preset: gold type -> candidate wordings (first = default).
+# Pre-registered 2026-11-14 before any model was run on this dataset (scripts/make_presets.py).
+# Per type: natural default, 2 hand-written alternatives, raw dataset tag (if different), casing, plural.
+writer:
+- writer
+- author
+- novelist
+- Writer
+- writers
+book:
+- book
+- literary work
+- novel
+- Book
+- books
+misc:
+- miscellaneous
+- other entity
+- named entity
+- misc
+- Miscellaneous
+literarygenre:
+- literary genre
+- genre
+- literary form
+- literarygenre
+- Literary Genre
+- literary genres
+person:
+- person
+- person name
+- human
+- Person
+- persons
+award:
+- award
+- prize
+- honor
+- Award
+- awards
+poem:
+- poem
+- poetry
+- verse work
+- Poem
+- poems
+organisation:
+- organization
+- company
+- institution
+- organisation
+- Organization
+- organizations
+country:
+- country
+- nation
+- sovereign state
+- Country
+- countries
+location:
+- location
+- place
+- geographic location
+- Location
+- locations
+magazine:
+- magazine
+- periodical
+- publication
+- Magazine
+- magazines
+event:
+- event
+- historical event
+- occurrence
+- Event
+- events

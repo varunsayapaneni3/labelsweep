@@ -37,14 +37,30 @@ def validate_candidates(candidates: dict[str, list[str]]) -> None:
             owner[key] = typ
 
 
+def pluralize(phrase: str) -> str | None:
+    """Plural of the last word of an English noun phrase; None for adjectives like 'miscellaneous'."""
+    head, _, last = phrase.rpartition(" ")
+    low = last.lower()
+    if low.endswith("ous"):
+        return None
+    if low.endswith("y") and len(low) > 1 and low[-2] not in "aeiou":
+        last = last[:-1] + "ies"
+    elif low.endswith(("s", "x", "z", "ch", "sh")):
+        last = last + "es"
+    else:
+        last = last + "s"
+    return f"{head} {last}" if head else last
+
+
 def auto_variants(wording: str) -> list[str]:
     """Mechanical rewordings of a label: as-is, lowercase, Title Case, plural, '<x> name'."""
     w = wording.strip()
     low = w.lower()
-    plural = low + ("es" if low.endswith(("s", "x", "ch", "sh")) else "s")
     seen: set[str] = set()
     uniq: list[str] = []
-    for v in (w, low, w.title(), plural, f"{low} name"):
+    for v in (w, low, w.title(), pluralize(low), f"{low} name"):
+        if v is None:
+            continue
         if v not in seen:
             seen.add(v)
             uniq.append(v)

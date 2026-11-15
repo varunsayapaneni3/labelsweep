@@ -1,0 +1,89 @@
+# labelsweep preset: gold type -> candidate wordings (first = default).
+# Pre-registered 2026-11-14 before any model was run on this dataset (scripts/make_presets.py).
+# Per type: natural default, 2 hand-written alternatives, raw dataset tag (if different), casing, plural.
+task:
+- task
+- machine learning task
+- research problem
+- Task
+- tasks
+field:
+- field
+- research field
+- area of study
+- Field
+- fields
+product:
+- product
+- software product
+- commercial product
+- Product
+- products
+metrics:
+- metric
+- evaluation metric
+- performance measure
+- metrics
+- Metric
+misc:
+- miscellaneous
+- other entity
+- named entity
+- misc
+- Miscellaneous
+algorithm:
+- algorithm
+- machine learning algorithm
+- method
+- Algorithm
+- algorithms
+researcher:
+- researcher
+- scientist
+- academic
+- Researcher
+- researchers
+organisation:
+- organization
+- company
+- institution
+- organisation
+- Organization
+- organizations
+conference:
+- conference
+- academic conference
+- scientific venue
+- Conference
+- conferences
+person:
+- person
+- person name
+- human
+- Person
+- persons
+programlang:
+- programming language
+- coding language
+- language
+- programlang
+- Programming Language
+- programming languages
+country:
+- country
+- nation
+- sovereign state
+- Country
+- countries
+location:
+- location
+- place
+- geographic location
+- Location
+- locations
+university:
+- university
+- college
+- academic institution
+- University
+- universities

@@ -1,0 +1,51 @@
+# labelsweep preset: gold type -> candidate wordings (first = default).
+# Pre-registered 2026-11-14 before any model was run on this dataset (scripts/make_presets.py).
+# Per type: natural default, 2 hand-written alternatives, raw dataset tag (if different), casing, plural.
+Amenity:
+- amenity
+- restaurant feature
+- service
+- Amenity
+- amenities
+Cuisine:
+- cuisine
+- type of food
+- food style
+- Cuisine
+- cuisines
+Dish:
+- dish
+- food item
+- meal
+- Dish
+- dishes
+Hours:
+- hours
+- opening hours
+- time
+- Hours
+- hourses
+Location:
+- location
+- place
+- area
+- Location
+- locations
+Price:
+- price
+- price range
+- cost
+- Price
+- prices
+Rating:
+- rating
+- review rating
+- quality
+- Rating
+- ratings
+Restaurant_Name:
+- restaurant name
+- restaurant
+- business name
+- Restaurant Name
+- restaurant names

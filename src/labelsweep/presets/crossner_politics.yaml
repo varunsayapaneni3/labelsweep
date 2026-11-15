@@ -1,0 +1,59 @@
+# labelsweep preset: gold type -> candidate wordings (first = default).
+# Pre-registered 2026-11-14 before any model was run on this dataset (scripts/make_presets.py).
+# Per type: natural default, 2 hand-written alternatives, raw dataset tag (if different), casing, plural.
+politicalparty:
+- political party
+- party
+- political organization
+- politicalparty
+- Political Party
+- political parties
+location:
+- location
+- place
+- geographic location
+- Location
+- locations
+organisation:
+- organization
+- company
+- institution
+- organisation
+- Organization
+- organizations
+politician:
+- politician
+- political figure
+- elected official
+- Politician
+- politicians
+election:
+- election
+- political election
+- vote
+- Election
+- elections
+country:
+- country
+- nation
+- sovereign state
+- Country
+- countries
+person:
+- person
+- person name
+- human
+- Person
+- persons
+misc:
+- miscellaneous
+- other entity
+- named entity
+- misc
+- Miscellaneous
+event:
+- event
+- historical event
+- occurrence
+- Event
+- events
