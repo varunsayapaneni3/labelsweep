@@ -5,7 +5,43 @@ from __future__ import annotations
 import statistics
 
 from .metrics import Scores
-from .sweep import SweepResult
+from .sweep import SweepResult, pluralize
+
+
+def is_trivial_variant(wording: str, default: str) -> bool:
+    """Casing or plural of the default wording (not the default itself)."""
+    if wording == default:
+        return False
+    return wording.lower() == default.lower() or wording.lower() == (
+        pluralize(default.lower()) or ""
+    )
+
+
+def summarize(res: dict, min_support: int = 30) -> dict:
+    """Aggregate sensitivity over types with at least `min_support` gold test spans."""
+    support = res.get("support", {}).get("test", {})
+    used, spreads, trivial, micro = [], [], [], []
+    for t, rows in res["per_type"].items():
+        micro += [r["test_micro_f1"] for r in rows]
+        if support.get(t, 0) < min_support:
+            continue
+        used.append(t)
+        f = [r["test_type_f1"] for r in rows]
+        spreads.append(max(f) - min(f))
+        d = rows[0]
+        tv = [
+            r["test_type_f1"]
+            for r in rows
+            if is_trivial_variant(r["wording"], d["wording"])
+        ]
+        trivial.append(max([abs(x - d["test_type_f1"]) for x in tv], default=0.0))
+    return {
+        "types_used": used,
+        "median_spread": statistics.median(spreads) if spreads else 0.0,
+        "max_spread": max(spreads, default=0.0),
+        "median_trivial_spread": statistics.median(trivial) if trivial else 0.0,
+        "micro_range": (max(micro) - min(micro)) if micro else 0.0,
+    }
 
 
 def _scores(s: Scores) -> dict:
@@ -38,6 +74,10 @@ def to_dict(r: SweepResult) -> dict:
         "dev": {"default": _scores(r.dev_default), "best": _scores(r.dev_best)},
         "test": {"default": _scores(r.test_default), "best": _scores(r.test_best)},
         "test_gain_ci95": list(r.test_gain_ci),
+        "support": {
+            "dev": {t: v.tp + v.fn for t, v in r.dev_default.per_type.items()},
+            "test": {t: v.tp + v.fn for t, v in r.test_default.per_type.items()},
+        },
         "n_dev": r.n_dev,
         "n_test": r.n_test,
         "n_label_sets": r.n_label_sets,
@@ -49,7 +89,7 @@ def _pct(x: float) -> str:
     return f"{100 * x:.1f}"
 
 
-def markdown(res: dict) -> str:
+def markdown(res: dict, min_support: int = 30) -> str:
     m = res["meta"]
     lines = [
         f"### {m.get('data', '?')} | {m.get('model', '?')} | threshold {m.get('threshold', '?')}",
@@ -58,26 +98,30 @@ def markdown(res: dict) -> str:
         "",
         "Per-type F1 on **test** across wordings (others held at default); best = chosen on dev.",
         "",
-        "| type | default | F1 default | F1 min | F1 max | spread | dev-chosen | F1 dev-chosen (test) |",
-        "|---|---|---|---|---|---|---|---|",
+        "| type | test spans | default | F1 default | F1 min | F1 max | spread | dev-chosen | F1 dev-chosen (test) |",
+        "|---|---|---|---|---|---|---|---|---|",
     ]
-    spreads = []
+    support = res.get("support", {}).get("test", {})
     for t, rows in res["per_type"].items():
         f = [r["test_type_f1"] for r in rows]
         default = rows[0]
         chosen = res["best_labels"][t]
         ch = next(r for r in rows if r["wording"] == chosen)
-        spreads.append(max(f) - min(f))
+        n = support.get(t, "?")
+        flag = "" if isinstance(n, int) and n >= min_support else " (small)"
         lines.append(
-            f"| {t} | {default['wording']} | {_pct(default['test_type_f1'])} | {_pct(min(f))} | {_pct(max(f))} "
+            f"| {t} | {n}{flag} | {default['wording']} | {_pct(default['test_type_f1'])} | {_pct(min(f))} | {_pct(max(f))} "
             f"| {_pct(max(f) - min(f))} | {chosen} | {_pct(ch['test_type_f1'])} |"
         )
     td, tb = res["test"]["default"], res["test"]["best"]
     lo, hi = res["test_gain_ci95"]
+    sm = summarize(res, min_support)
     lines += [
         "",
-        f"- Median per-type spread: **{_pct(statistics.median(spreads))}** F1 points "
-        f"(max {_pct(max(spreads))}).",
+        f"- Types with >= {min_support} test spans: {len(sm['types_used'])}/{len(res['per_type'])}. "
+        f"Median per-type spread: **{_pct(sm['median_spread'])}** F1 points (max {_pct(sm['max_spread'])}); "
+        f"from casing/plural alone: **{_pct(sm['median_trivial_spread'])}**.",
+        f"- Micro-F1 range over all single-type rewordings: {_pct(sm['micro_range'])} points.",
         f"- Micro-F1 on test: default **{_pct(td['micro_f1'])}** -> dev-chosen labels **{_pct(tb['micro_f1'])}** "
         f"(gain {_pct(tb['micro_f1'] - td['micro_f1'])}, paired bootstrap 95% CI [{_pct(lo)}, {_pct(hi)}]).",
         f"- Macro-F1 on test: default {_pct(td['macro_f1'])} -> {_pct(tb['macro_f1'])}.",
