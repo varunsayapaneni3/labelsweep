@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Owner** | Varun Sayapaneni |
-| **Status** | Phase 2 of 6 (full study grid running; 16 of 18 runs complete) |
+| **Status** | Phase 3 of 6 (grid complete, 18/18; verdicts in docs/results.md; figures and error audit pending) |
 | **Last updated** | 2026-11-14 |
 | **Repository** | `C:/Users/varun/Desktop/projects/labelsweep` (MIT; not yet pushed) |
 | **Related documents** | [Implementation](IMPLEMENTATION.md), [Pre-registration](PREREGISTRATION.md), vault: `50 Projects/Project Spec - labelsweep.md` |
@@ -86,8 +86,8 @@ Time boxes follow a weekend-MVP-then-iterate model. Each block is a single sitti
 |---|---|---|---|---|
 | 0 | Scouting, novelty sweep, spec | 1 h | Done 2026-11-14 | Spec in vault |
 | 1 | MVP: data, metrics, sweep, GLiNER adapter, CLI, presets, tests | 4 h | Done 2026-11-14 | 27 tests pass; smoke run works |
-| 2 | Full grid: 6 datasets x 3 model sizes | ~1.5 h unattended | Running (16/18) | 18 JSONs in `results/` |
-| 3 | Analysis: verdicts, figures, README results | 2 h | Not started | D3, D4 accepted |
+| 2 | Full grid: 6 datasets x 3 model sizes | ~1.5 h unattended | Done 2026-11-14 | 18 JSONs in `results/` |
+| 3 | Analysis: verdicts, figures, README results | 2 h | In progress (verdicts + README done; 3.1, 3.3-3.6 open) | D3, D4 accepted |
 | 4 | Release v0.1: GitHub, CI, PyPI | 1.5 h | Not started | D1, D2 accepted |
 | 5 | Blog post | 3 h (two sittings) | Not started | D5 accepted |
 | 6 | v0.2 iteration (see section 8) | 2 h per task | Backlog | Per task |
@@ -101,12 +101,12 @@ large 338-423 s per dataset (some large runs shared the GPU with manual reruns).
 | Task | Files | Done when |
 |---|---|---|
 | 3.1 Fix JSONL default output path (example runs currently land in `results/` as `dev__<model>.json`) | `src/labelsweep/cli.py`, `tests/test_cli.py` | JSONL runs default to `results/custom/<parent>_<stem>__<model>.json`; test passes |
-| 3.2 Write `scripts/analyze.py`: summary table, H1-H4 verdicts, figures | `scripts/analyze.py`; `matplotlib` in an `analysis` dependency group | Re-running produces identical `docs/results.md` and `docs/fig/*.png` |
+| 3.2 Write `scripts/analyze.py`: summary table, H1-H4 verdicts, figures (verdicts done 2026-11-14; figures open) | `scripts/analyze.py`; `matplotlib` in an `analysis` dependency group | Re-running produces identical `docs/results.md` and `docs/fig/*.png` |
 | 3.3 Figure 1: per-type spread by dataset and model (dot plot) | `docs/fig/spread.png` | Generated from results only |
 | 3.4 Figure 2: dev gain versus test gain with CIs | `docs/fig/dev_vs_test.png` | Generated from results only |
 | 3.5 Figure 3: casing/plural spread versus synonym spread | `docs/fig/trivial_vs_semantic.png` | Generated from results only |
 | 3.6 Error audit: inspect the 3 largest per-type drops, classify the cause (label stealing between types, boundary change, missed spans) | `docs/error_audit.md` | Each case has counts from the result files and a short explanation |
-| 3.7 Replace `RESULTS_PENDING` in README | `README.md` | Numbers match `docs/results.md` |
+| 3.7 Replace `RESULTS_PENDING` in README (done 2026-11-14) | `README.md` | Numbers match `docs/results.md` |
 
 ### Phase 4: Release v0.1 (1.5 h)
 | Task | Done when |
@@ -168,4 +168,5 @@ Venue: open decision (section 10).
 | 2026-11-14 | Benchmarks: CrossNER x5 + MIT Restaurant (standard zero-shot NER suite); MIT Movie loader works but has no preset yet (time box) |
 | 2026-11-14 | Models: GLiNER v2.1 small/medium/large (Apache-2.0) for a controlled size comparison |
 | 2026-11-14 | Candidate wordings fixed by `scripts/make_presets.py` before the full grid |
+| 2026-11-14 | Grid complete. H1 and H4 supported; H2 and H3 not supported (docs/results.md) |
 | 2026-11-14 | Noise floor verified: two independent reruns (crossner_ai, small) reproduced all scores exactly |

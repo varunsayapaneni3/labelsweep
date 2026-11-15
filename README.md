@@ -54,10 +54,29 @@ Data file (JSONL, token spans, end-exclusive):
 
 ## Results
 
-**Study in progress.** The pre-registered grid (6 benchmarks x 3 GLiNER v2.1 sizes) is running; finished
-runs are in [`results/`](results/) and can be summarised with `labelsweep report results --summary`.
-Hypothesis verdicts and figures will be added when all 18 runs are complete
-(see [pre-registration](docs/PREREGISTRATION.md) and [plan](docs/PROJECT_PLAN.md), phase 3).
+Pre-registered study: 6 benchmarks (CrossNER ai, literature, music, politics, science; MIT Restaurant) x
+GLiNER v2.1 small / medium / large, full official splits, threshold 0.5. Full tables: [docs/results.md](docs/results.md)
+(regenerate with `python scripts/analyze.py`).
+
+| ID | Rule | Observed | Verdict |
+|---|---|---|---|
+| H1 | median per-type spread >= 5 in all 18 runs | 18/18 runs; range 15.7-47.0 | **supported** |
+| H2 | test gain < dev gain and 95% CI includes 0, in >= 10/18 runs | 4/18 (test < dev: 13/18; CI includes 0: 5/18; CI above 0: 12/18; CI below 0: 1/18) | **not supported** |
+| H3 | spread small > medium > large on >= 4/6 datasets | 2/6 datasets | **not supported** |
+| H4 | casing/plural spread >= 2 in >= 15/18 runs | 18/18 runs; range 6.2-28.0 | **supported** |
+
+What this means in practice:
+
+- **Wording matters a lot.** Rewording a single entity type moves that type's F1 by a median of 15.7-47.0 points
+  depending on the run, and capitalisation or a plural alone moves it by 6.2-28.0 points.
+- **Choosing wordings on a labelled dev set usually helps, but less than it seems.** The dev-chosen label set improved
+  test micro-F1 in 17 of 18 runs (-1.7 to +5.6 points; CI above 0 in 12 runs), and the test gain was smaller than the
+  dev gain in 13 of 18. In one run (literature, small) the "better" wording was worse on test.
+- **Bigger is not more robust.** Sensitivity fell with model size on only 2 of 6 datasets; on politics it rose
+  steadily (28.4 -> 37.9 -> 45.3).
+
+Caveat: a large per-type drop can come from the new wording taking spans away from another type rather than
+from missing entities; an error audit of the largest drops is planned ([plan](docs/PROJECT_PLAN.md), task 3.6).
 
 ## How it works
 
