@@ -1,0 +1,492 @@
+{
+  "defaults": {
+    "politicalparty": "political party",
+    "location": "location",
+    "organisation": "organization",
+    "politician": "politician",
+    "election": "election",
+    "country": "country",
+    "person": "person",
+    "misc": "miscellaneous",
+    "event": "event"
+  },
+  "best_labels": {
+    "politicalparty": "Political Party",
+    "location": "place",
+    "organisation": "Organization",
+    "politician": "political figure",
+    "election": "election",
+    "country": "nation",
+    "person": "Person",
+    "misc": "miscellaneous",
+    "event": "Event"
+  },
+  "per_type": {
+    "politicalparty": [
+      {
+        "wording": "political party",
+        "dev_type_f1": 0.6863966770508826,
+        "test_type_f1": 0.6787947697555429,
+        "dev_micro_f1": 0.5550337540358088,
+        "test_micro_f1": 0.6322439557769409
+      },
+      {
+        "wording": "party",
+        "dev_type_f1": 0.6951928156365557,
+        "test_type_f1": 0.6865497076023392,
+        "dev_micro_f1": 0.5769512373700396,
+        "test_micro_f1": 0.6411807403822889
+      },
+      {
+        "wording": "political organization",
+        "dev_type_f1": 0.6288607594936709,
+        "test_type_f1": 0.5896201177100053,
+        "dev_micro_f1": 0.5361098803721754,
+        "test_micro_f1": 0.6125290023201856
+      },
+      {
+        "wording": "politicalparty",
+        "dev_type_f1": 0.6910778751933986,
+        "test_type_f1": 0.6711711711711712,
+        "dev_micro_f1": 0.5674527610956497,
+        "test_micro_f1": 0.6375439873801723
+      },
+      {
+        "wording": "Political Party",
+        "dev_type_f1": 0.7043432757718472,
+        "test_type_f1": 0.6852173913043479,
+        "dev_micro_f1": 0.5708382526564345,
+        "test_micro_f1": 0.6409068746952706
+      },
+      {
+        "wording": "political parties",
+        "dev_type_f1": 0.31897203325774753,
+        "test_type_f1": 0.32863070539419087,
+        "dev_micro_f1": 0.4508687837028161,
+        "test_micro_f1": 0.5558852621167161
+      }
+    ],
+    "location": [
+      {
+        "wording": "location",
+        "dev_type_f1": 0.5996533795493935,
+        "test_type_f1": 0.7585692995529062,
+        "dev_micro_f1": 0.5550337540358088,
+        "test_micro_f1": 0.6322439557769409
+      },
+      {
+        "wording": "place",
+        "dev_type_f1": 0.6625514403292181,
+        "test_type_f1": 0.7835051546391752,
+        "dev_micro_f1": 0.557757228827242,
+        "test_micro_f1": 0.6330007301046483
+      },
+      {
+        "wording": "geographic location",
+        "dev_type_f1": 0.5559845559845559,
+        "test_type_f1": 0.676126878130217,
+        "dev_micro_f1": 0.5523135867963455,
+        "test_micro_f1": 0.6175205799238236
+      },
+      {
+        "wording": "Location",
+        "dev_type_f1": 0.576,
+        "test_type_f1": 0.7453769559032717,
+        "dev_micro_f1": 0.5527859237536656,
+        "test_micro_f1": 0.6290361738285991
+      },
+      {
+        "wording": "locations",
+        "dev_type_f1": 0.4984984984984986,
+        "test_type_f1": 0.5534729878721059,
+        "dev_micro_f1": 0.5466526883330838,
+        "test_micro_f1": 0.5971241170534813
+      }
+    ],
+    "organisation": [
+      {
+        "wording": "organization",
+        "dev_type_f1": 0.6596306068601583,
+        "test_type_f1": 0.7013752455795678,
+        "dev_micro_f1": 0.5550337540358088,
+        "test_micro_f1": 0.6322439557769409
+      },
+      {
+        "wording": "company",
+        "dev_type_f1": 0.14498933901918976,
+        "test_type_f1": 0.08759124087591241,
+        "dev_micro_f1": 0.5372999093929326,
+        "test_micro_f1": 0.6003043367993913
+      },
+      {
+        "wording": "institution",
+        "dev_type_f1": 0.5851648351648352,
+        "test_type_f1": 0.6673387096774194,
+        "dev_micro_f1": 0.5589863093504224,
+        "test_micro_f1": 0.6391378057641076
+      },
+      {
+        "wording": "organisation",
+        "dev_type_f1": 0.6524633821571239,
+        "test_type_f1": 0.6932270916334662,
+        "dev_micro_f1": 0.5548387096774193,
+        "test_micro_f1": 0.6288421819948974
+      },
+      {
+        "wording": "Organization",
+        "dev_type_f1": 0.6675324675324676,
+        "test_type_f1": 0.6761633428300095,
+        "dev_micro_f1": 0.5574636723910171,
+        "test_micro_f1": 0.6274557361144798
+      },
+      {
+        "wording": "organizations",
+        "dev_type_f1": 0.5541795665634675,
+        "test_type_f1": 0.5806451612903226,
+        "dev_micro_f1": 0.554995552920249,
+        "test_micro_f1": 0.6210918114143921
+      }
+    ],
+    "politician": [
+      {
+        "wording": "politician",
+        "dev_type_f1": 0.7203219315895373,
+        "test_type_f1": 0.7573739295908659,
+        "dev_micro_f1": 0.5550337540358088,
+        "test_micro_f1": 0.6322439557769409
+      },
+      {
+        "wording": "political figure",
+        "dev_type_f1": 0.7293156281920328,
+        "test_type_f1": 0.7467411545623837,
+        "dev_micro_f1": 0.5564575645756458,
+        "test_micro_f1": 0.6260381045432339
+      },
+      {
+        "wording": "elected official",
+        "dev_type_f1": 0.6424731182795699,
+        "test_type_f1": 0.6127450980392156,
+        "dev_micro_f1": 0.5450278674097975,
+        "test_micro_f1": 0.6076810889645115
+      },
+      {
+        "wording": "Politician",
+        "dev_type_f1": 0.7094861660079053,
+        "test_type_f1": 0.7440585009140768,
+        "dev_micro_f1": 0.5529913273555784,
+        "test_micro_f1": 0.6295305278521042
+      },
+      {
+        "wording": "politicians",
+        "dev_type_f1": 0.046413502109704644,
+        "test_type_f1": 0.04190476190476191,
+        "dev_micro_f1": 0.4812206572769953,
+        "test_micro_f1": 0.5548402769342888
+      }
+    ],
+    "election": [
+      {
+        "wording": "election",
+        "dev_type_f1": 0.141749723145072,
+        "test_type_f1": 0.21287779237844942,
+        "dev_micro_f1": 0.5550337540358088,
+        "test_micro_f1": 0.6322439557769409
+      },
+      {
+        "wording": "political election",
+        "dev_type_f1": 0.09719222462203024,
+        "test_type_f1": 0.17268041237113405,
+        "dev_micro_f1": 0.536879224213929,
+        "test_micro_f1": 0.6182304977485701
+      },
+      {
+        "wording": "vote",
+        "dev_type_f1": 0.0,
+        "test_type_f1": 0.0,
+        "dev_micro_f1": 0.5414847161572053,
+        "test_micro_f1": 0.6128720058069199
+      },
+      {
+        "wording": "Election",
+        "dev_type_f1": 0.13157894736842105,
+        "test_type_f1": 0.21932114882506526,
+        "dev_micro_f1": 0.5523110785033015,
+        "test_micro_f1": 0.6322188449848024
+      },
+      {
+        "wording": "elections",
+        "dev_type_f1": 0.11070110701107011,
+        "test_type_f1": 0.21961932650073204,
+        "dev_micro_f1": 0.5480301018149624,
+        "test_micro_f1": 0.6309348996573665
+      }
+    ],
+    "country": [
+      {
+        "wording": "country",
+        "dev_type_f1": 0.4100294985250737,
+        "test_type_f1": 0.5855513307984791,
+        "dev_micro_f1": 0.5550337540358088,
+        "test_micro_f1": 0.6322439557769409
+      },
+      {
+        "wording": "nation",
+        "dev_type_f1": 0.439344262295082,
+        "test_type_f1": 0.6077003121748179,
+        "dev_micro_f1": 0.5706752599970705,
+        "test_micro_f1": 0.641990291262136
+      },
+      {
+        "wording": "sovereign state",
+        "dev_type_f1": 0.1885245901639344,
+        "test_type_f1": 0.3239171374764595,
+        "dev_micro_f1": 0.5742309407044138,
+        "test_micro_f1": 0.6160461973215382
+      },
+      {
+        "wording": "Country",
+        "dev_type_f1": 0.3674540682414698,
+        "test_type_f1": 0.5501792114695342,
+        "dev_micro_f1": 0.5439929845074539,
+        "test_micro_f1": 0.6223945710130877
+      },
+      {
+        "wording": "countries",
+        "dev_type_f1": 0.34309623430962344,
+        "test_type_f1": 0.39410681399631675,
+        "dev_micro_f1": 0.5695600475624256,
+        "test_micro_f1": 0.6160472557223726
+      }
+    ],
+    "person": [
+      {
+        "wording": "person",
+        "dev_type_f1": 0.6896551724137931,
+        "test_type_f1": 0.7789473684210527,
+        "dev_micro_f1": 0.5550337540358088,
+        "test_micro_f1": 0.6322439557769409
+      },
+      {
+        "wording": "person name",
+        "dev_type_f1": 0.6325581395348837,
+        "test_type_f1": 0.7322033898305086,
+        "dev_micro_f1": 0.5480740958541606,
+        "test_micro_f1": 0.6259597806215721
+      },
+      {
+        "wording": "human",
+        "dev_type_f1": 0.006825938566552902,
+        "test_type_f1": 0.021333333333333333,
+        "dev_micro_f1": 0.5208984084486092,
+        "test_micro_f1": 0.5892547660311959
+      },
+      {
+        "wording": "Person",
+        "dev_type_f1": 0.7253668763102725,
+        "test_type_f1": 0.7982456140350878,
+        "dev_micro_f1": 0.559553532089881,
+        "test_micro_f1": 0.6362752248966691
+      },
+      {
+        "wording": "persons",
+        "dev_type_f1": 0.3510638297872341,
+        "test_type_f1": 0.351931330472103,
+        "dev_micro_f1": 0.5299573089945533,
+        "test_micro_f1": 0.5995827708921341
+      }
+    ],
+    "misc": [
+      {
+        "wording": "miscellaneous",
+        "dev_type_f1": 0.0,
+        "test_type_f1": 0.0,
+        "dev_micro_f1": 0.5550337540358088,
+        "test_micro_f1": 0.6322439557769409
+      },
+      {
+        "wording": "other entity",
+        "dev_type_f1": 0.0,
+        "test_type_f1": 0.0,
+        "dev_micro_f1": 0.5529980941210967,
+        "test_micro_f1": 0.629850383165065
+      },
+      {
+        "wording": "named entity",
+        "dev_type_f1": 0.0,
+        "test_type_f1": 0.0,
+        "dev_micro_f1": 0.551278283867176,
+        "test_micro_f1": 0.6300669506999392
+      },
+      {
+        "wording": "misc",
+        "dev_type_f1": 0.0,
+        "test_type_f1": 0.0,
+        "dev_micro_f1": 0.5599294947121034,
+        "test_micro_f1": 0.6351482741857073
+      },
+      {
+        "wording": "Miscellaneous",
+        "dev_type_f1": 0.0,
+        "test_type_f1": 0.0,
+        "dev_micro_f1": 0.5574299545254511,
+        "test_micro_f1": 0.6313235472522141
+      }
+    ],
+    "event": [
+      {
+        "wording": "event",
+        "dev_type_f1": 0.5408805031446541,
+        "test_type_f1": 0.5723076923076924,
+        "dev_micro_f1": 0.5550337540358088,
+        "test_micro_f1": 0.6322439557769409
+      },
+      {
+        "wording": "historical event",
+        "dev_type_f1": 0.5256410256410258,
+        "test_type_f1": 0.5449101796407185,
+        "dev_micro_f1": 0.5567344532861774,
+        "test_micro_f1": 0.6346692654403703
+      },
+      {
+        "wording": "occurrence",
+        "dev_type_f1": 0.3263598326359832,
+        "test_type_f1": 0.346774193548387,
+        "dev_micro_f1": 0.5472563230291377,
+        "test_micro_f1": 0.6256109481915934
+      },
+      {
+        "wording": "Event",
+        "dev_type_f1": 0.562874251497006,
+        "test_type_f1": 0.5899705014749261,
+        "dev_micro_f1": 0.5547274587169371,
+        "test_micro_f1": 0.6330708661417324
+      },
+      {
+        "wording": "events",
+        "dev_type_f1": 0.4393939393939394,
+        "test_type_f1": 0.5017182130584192,
+        "dev_micro_f1": 0.5483775811209439,
+        "test_micro_f1": 0.6297333495677585
+      }
+    ]
+  },
+  "dev": {
+    "default": {
+      "micro_p": 0.5675270108043218,
+      "micro_r": 0.5430786904078116,
+      "micro_f1": 0.5550337540358088,
+      "macro_f1": 0.49425749914206274,
+      "per_type_f1": {
+        "politicalparty": 0.6863966770508826,
+        "location": 0.5996533795493935,
+        "organisation": 0.6596306068601583,
+        "politician": 0.7203219315895373,
+        "election": 0.141749723145072,
+        "country": 0.4100294985250737,
+        "person": 0.6896551724137931,
+        "misc": 0.0,
+        "event": 0.5408805031446541
+      }
+    },
+    "best": {
+      "micro_p": 0.6143511450381679,
+      "micro_r": 0.5778288340034463,
+      "micro_f1": 0.5955305608998075,
+      "macro_f1": 0.5347305596484137,
+      "per_type_f1": {
+        "politicalparty": 0.738618925831202,
+        "location": 0.6565874730021598,
+        "organisation": 0.6797385620915034,
+        "politician": 0.7789725209080048,
+        "election": 0.18388429752066113,
+        "country": 0.45454545454545453,
+        "person": 0.738095238095238,
+        "misc": 0.0,
+        "event": 0.5821325648414986
+      }
+    }
+  },
+  "test": {
+    "default": {
+      "micro_p": 0.6469418199900547,
+      "micro_r": 0.6181990971727251,
+      "micro_f1": 0.6322439557769409,
+      "macro_f1": 0.5606441587093952,
+      "per_type_f1": {
+        "politicalparty": 0.6787947697555429,
+        "location": 0.7585692995529062,
+        "organisation": 0.7013752455795678,
+        "politician": 0.7573739295908659,
+        "election": 0.21287779237844942,
+        "country": 0.5855513307984791,
+        "person": 0.7789473684210527,
+        "misc": 0.0,
+        "event": 0.5723076923076924
+      }
+    },
+    "best": {
+      "micro_p": 0.6740665993945509,
+      "micro_r": 0.6348301259206462,
+      "micro_f1": 0.653860271626086,
+      "macro_f1": 0.5799950041348162,
+      "per_type_f1": {
+        "politicalparty": 0.7096774193548387,
+        "location": 0.8012718600953895,
+        "organisation": 0.725868725868726,
+        "politician": 0.7850055126791621,
+        "election": 0.23181257706535138,
+        "country": 0.6175580221997982,
+        "person": 0.779746835443038,
+        "misc": 0.0,
+        "event": 0.5690140845070423
+      }
+    }
+  },
+  "test_gain_ci95": [
+    0.010496726608956508,
+    0.033700959538186526
+  ],
+  "support": {
+    "dev": {
+      "politicalparty": 1053,
+      "location": 211,
+      "organisation": 431,
+      "politician": 411,
+      "election": 528,
+      "country": 183,
+      "person": 286,
+      "misc": 193,
+      "event": 186
+    },
+    "test": {
+      "politicalparty": 953,
+      "location": 599,
+      "organisation": 513,
+      "politician": 485,
+      "election": 434,
+      "country": 418,
+      "person": 354,
+      "misc": 258,
+      "event": 195
+    }
+  },
+  "n_dev": 541,
+  "n_test": 651,
+  "n_label_sets": 40,
+  "meta": {
+    "data": "crossner_politics",
+    "labels": "preset:crossner_politics",
+    "auto": false,
+    "model": "urchade/gliner_small-v2.1",
+    "threshold": 0.5,
+    "seconds": 96.1,
+    "timestamp": "2026-11-15T01:37:34+00:00",
+    "versions": {
+      "labelsweep": "0.1.0",
+      "python": "3.12.13",
+      "gliner": "0.2.30",
+      "torch": "2.11.0+cu128",
+      "transformers": "5.22.2"
+    }
+  }
+}

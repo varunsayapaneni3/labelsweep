@@ -1,0 +1,717 @@
+{
+  "defaults": {
+    "task": "task",
+    "field": "field",
+    "product": "product",
+    "metrics": "metric",
+    "misc": "miscellaneous",
+    "algorithm": "algorithm",
+    "researcher": "researcher",
+    "organisation": "organization",
+    "conference": "conference",
+    "person": "person",
+    "programlang": "programming language",
+    "country": "country",
+    "location": "location",
+    "university": "university"
+  },
+  "best_labels": {
+    "task": "machine learning task",
+    "field": "area of study",
+    "product": "Product",
+    "metrics": "Metric",
+    "misc": "Miscellaneous",
+    "algorithm": "Algorithm",
+    "researcher": "academic",
+    "organisation": "organizations",
+    "conference": "conference",
+    "person": "person",
+    "programlang": "programlang",
+    "country": "Country",
+    "location": "place",
+    "university": "University"
+  },
+  "per_type": {
+    "task": [
+      {
+        "wording": "task",
+        "dev_type_f1": 0.4230769230769231,
+        "test_type_f1": 0.38274932614555257,
+        "dev_micro_f1": 0.5267326732673266,
+        "test_micro_f1": 0.5205099778270509
+      },
+      {
+        "wording": "machine learning task",
+        "dev_type_f1": 0.4486692015209125,
+        "test_type_f1": 0.48223350253807107,
+        "dev_micro_f1": 0.5325835262983791,
+        "test_micro_f1": 0.5383970957833007
+      },
+      {
+        "wording": "research problem",
+        "dev_type_f1": 0.023809523809523808,
+        "test_type_f1": 0.03225806451612903,
+        "dev_micro_f1": 0.5016744809109176,
+        "test_micro_f1": 0.5029736618521665
+      },
+      {
+        "wording": "Task",
+        "dev_type_f1": 0.3809523809523809,
+        "test_type_f1": 0.3561643835616438,
+        "dev_micro_f1": 0.5228023793787178,
+        "test_micro_f1": 0.5177580466148723
+      },
+      {
+        "wording": "tasks",
+        "dev_type_f1": 0.15730337078651685,
+        "test_type_f1": 0.1970802919708029,
+        "dev_micro_f1": 0.510053619302949,
+        "test_micro_f1": 0.5110481586402266
+      }
+    ],
+    "field": [
+      {
+        "wording": "field",
+        "dev_type_f1": 0.6437994722955146,
+        "test_type_f1": 0.591792656587473,
+        "dev_micro_f1": 0.5267326732673266,
+        "test_micro_f1": 0.5205099778270509
+      },
+      {
+        "wording": "research field",
+        "dev_type_f1": 0.56875,
+        "test_type_f1": 0.5316455696202531,
+        "dev_micro_f1": 0.5141149119893724,
+        "test_micro_f1": 0.5257528848860118
+      },
+      {
+        "wording": "area of study",
+        "dev_type_f1": 0.6484848484848484,
+        "test_type_f1": 0.6054590570719602,
+        "dev_micro_f1": 0.5142101784534039,
+        "test_micro_f1": 0.5229997212155003
+      },
+      {
+        "wording": "Field",
+        "dev_type_f1": 0.6475195822454308,
+        "test_type_f1": 0.5910064239828693,
+        "dev_micro_f1": 0.5291982843945892,
+        "test_micro_f1": 0.5219322598556357
+      },
+      {
+        "wording": "fields",
+        "dev_type_f1": 0.5755395683453237,
+        "test_type_f1": 0.5093167701863355,
+        "dev_micro_f1": 0.5087248322147652,
+        "test_micro_f1": 0.5092041914471821
+      }
+    ],
+    "product": [
+      {
+        "wording": "product",
+        "dev_type_f1": 0.41106719367588934,
+        "test_type_f1": 0.359621451104101,
+        "dev_micro_f1": 0.5267326732673266,
+        "test_micro_f1": 0.5205099778270509
+      },
+      {
+        "wording": "software product",
+        "dev_type_f1": 0.38636363636363635,
+        "test_type_f1": 0.5076452599388379,
+        "dev_micro_f1": 0.5173210161662818,
+        "test_micro_f1": 0.5357839042049568
+      },
+      {
+        "wording": "commercial product",
+        "dev_type_f1": 0.2727272727272727,
+        "test_type_f1": 0.2992700729927007,
+        "dev_micro_f1": 0.5121707235745249,
+        "test_micro_f1": 0.5200561009817671
+      },
+      {
+        "wording": "Product",
+        "dev_type_f1": 0.4126984126984127,
+        "test_type_f1": 0.3517915309446254,
+        "dev_micro_f1": 0.5264200792602378,
+        "test_micro_f1": 0.5238888888888887
+      },
+      {
+        "wording": "products",
+        "dev_type_f1": 0.2685185185185185,
+        "test_type_f1": 0.2330827067669173,
+        "dev_micro_f1": 0.5170340681362725,
+        "test_micro_f1": 0.5150407646893449
+      }
+    ],
+    "metrics": [
+      {
+        "wording": "metric",
+        "dev_type_f1": 0.5947955390334573,
+        "test_type_f1": 0.5722070844686648,
+        "dev_micro_f1": 0.5267326732673266,
+        "test_micro_f1": 0.5205099778270509
+      },
+      {
+        "wording": "evaluation metric",
+        "dev_type_f1": 0.5425101214574899,
+        "test_type_f1": 0.5856697819314641,
+        "dev_micro_f1": 0.5196013289036545,
+        "test_micro_f1": 0.5238229489709613
+      },
+      {
+        "wording": "performance measure",
+        "dev_type_f1": 0.5321888412017167,
+        "test_type_f1": 0.5607476635514018,
+        "dev_micro_f1": 0.526986255447536,
+        "test_micro_f1": 0.5246826516220028
+      },
+      {
+        "wording": "metrics",
+        "dev_type_f1": 0.5275590551181102,
+        "test_type_f1": 0.5723076923076924,
+        "dev_micro_f1": 0.522749916971106,
+        "test_micro_f1": 0.5230855855855856
+      },
+      {
+        "wording": "Metric",
+        "dev_type_f1": 0.6130268199233716,
+        "test_type_f1": 0.5666666666666667,
+        "dev_micro_f1": 0.5286898839137646,
+        "test_micro_f1": 0.516629711751663
+      }
+    ],
+    "misc": [
+      {
+        "wording": "miscellaneous",
+        "dev_type_f1": 0.05982905982905983,
+        "test_type_f1": 0.05405405405405406,
+        "dev_micro_f1": 0.5267326732673266,
+        "test_micro_f1": 0.5205099778270509
+      },
+      {
+        "wording": "other entity",
+        "dev_type_f1": 0.015873015873015872,
+        "test_type_f1": 0.08333333333333333,
+        "dev_micro_f1": 0.511947626841244,
+        "test_micro_f1": 0.5212121212121211
+      },
+      {
+        "wording": "named entity",
+        "dev_type_f1": 0.04184100418410042,
+        "test_type_f1": 0.017467248908296942,
+        "dev_micro_f1": 0.5161716171617161,
+        "test_micro_f1": 0.5250489784494822
+      },
+      {
+        "wording": "misc",
+        "dev_type_f1": 0.00930232558139535,
+        "test_type_f1": 0.034934497816593885,
+        "dev_micro_f1": 0.5220563847429518,
+        "test_micro_f1": 0.5222965440356746
+      },
+      {
+        "wording": "Miscellaneous",
+        "dev_type_f1": 0.07468879668049794,
+        "test_type_f1": 0.059701492537313425,
+        "dev_micro_f1": 0.5275304978569074,
+        "test_micro_f1": 0.5189488243430151
+      }
+    ],
+    "algorithm": [
+      {
+        "wording": "algorithm",
+        "dev_type_f1": 0.5036319612590799,
+        "test_type_f1": 0.48484848484848486,
+        "dev_micro_f1": 0.5267326732673266,
+        "test_micro_f1": 0.5205099778270509
+      },
+      {
+        "wording": "machine learning algorithm",
+        "dev_type_f1": 0.5089058524173029,
+        "test_type_f1": 0.47191011235955055,
+        "dev_micro_f1": 0.5259979872525998,
+        "test_micro_f1": 0.5246449456975774
+      },
+      {
+        "wording": "method",
+        "dev_type_f1": 0.4853333333333334,
+        "test_type_f1": 0.3862433862433862,
+        "dev_micro_f1": 0.5125628140703518,
+        "test_micro_f1": 0.5072951739618407
+      },
+      {
+        "wording": "Algorithm",
+        "dev_type_f1": 0.5300546448087432,
+        "test_type_f1": 0.46596858638743455,
+        "dev_micro_f1": 0.5329321297225008,
+        "test_micro_f1": 0.5187465025181869
+      },
+      {
+        "wording": "algorithms",
+        "dev_type_f1": 0.4727272727272727,
+        "test_type_f1": 0.37790697674418605,
+        "dev_micro_f1": 0.5245015207840488,
+        "test_micro_f1": 0.5179079022171688
+      }
+    ],
+    "researcher": [
+      {
+        "wording": "researcher",
+        "dev_type_f1": 0.6523605150214593,
+        "test_type_f1": 0.6863468634686347,
+        "dev_micro_f1": 0.5267326732673266,
+        "test_micro_f1": 0.5205099778270509
+      },
+      {
+        "wording": "scientist",
+        "dev_type_f1": 0.516431924882629,
+        "test_type_f1": 0.5228215767634855,
+        "dev_micro_f1": 0.5066050198150593,
+        "test_micro_f1": 0.5061111111111111
+      },
+      {
+        "wording": "academic",
+        "dev_type_f1": 0.6612244897959184,
+        "test_type_f1": 0.6148148148148147,
+        "dev_micro_f1": 0.525691699604743,
+        "test_micro_f1": 0.5149667405764967
+      },
+      {
+        "wording": "Researcher",
+        "dev_type_f1": 0.6175115207373272,
+        "test_type_f1": 0.6666666666666667,
+        "dev_micro_f1": 0.5168539325842696,
+        "test_micro_f1": 0.519134775374376
+      },
+      {
+        "wording": "researchers",
+        "dev_type_f1": 0.11764705882352941,
+        "test_type_f1": 0.155440414507772,
+        "dev_micro_f1": 0.48110417351298057,
+        "test_micro_f1": 0.4772727272727273
+      }
+    ],
+    "organisation": [
+      {
+        "wording": "organization",
+        "dev_type_f1": 0.607773851590106,
+        "test_type_f1": 0.6356589147286822,
+        "dev_micro_f1": 0.5267326732673266,
+        "test_micro_f1": 0.5205099778270509
+      },
+      {
+        "wording": "company",
+        "dev_type_f1": 0.4084507042253521,
+        "test_type_f1": 0.46491228070175433,
+        "dev_micro_f1": 0.5125084516565246,
+        "test_micro_f1": 0.5093484419263457
+      },
+      {
+        "wording": "institution",
+        "dev_type_f1": 0.6126126126126127,
+        "test_type_f1": 0.6579804560260587,
+        "dev_micro_f1": 0.5275091697232411,
+        "test_micro_f1": 0.5240101095197978
+      },
+      {
+        "wording": "organisation",
+        "dev_type_f1": 0.6099290780141844,
+        "test_type_f1": 0.6275510204081632,
+        "dev_micro_f1": 0.5270448548812665,
+        "test_micro_f1": 0.5195020746887966
+      },
+      {
+        "wording": "Organization",
+        "dev_type_f1": 0.5972222222222221,
+        "test_type_f1": 0.6165413533834586,
+        "dev_micro_f1": 0.5248928453676228,
+        "test_micro_f1": 0.5207756232686981
+      },
+      {
+        "wording": "organizations",
+        "dev_type_f1": 0.625,
+        "test_type_f1": 0.6688963210702341,
+        "dev_micro_f1": 0.5308025308025308,
+        "test_micro_f1": 0.5263157894736842
+      }
+    ],
+    "conference": [
+      {
+        "wording": "conference",
+        "dev_type_f1": 0.5241379310344828,
+        "test_type_f1": 0.5859872611464968,
+        "dev_micro_f1": 0.5267326732673266,
+        "test_micro_f1": 0.5205099778270509
+      },
+      {
+        "wording": "academic conference",
+        "dev_type_f1": 0.5170068027210885,
+        "test_type_f1": 0.6097560975609756,
+        "dev_micro_f1": 0.5226896323285856,
+        "test_micro_f1": 0.5235048678720445
+      },
+      {
+        "wording": "scientific venue",
+        "dev_type_f1": 0.40944881889763785,
+        "test_type_f1": 0.5034965034965035,
+        "dev_micro_f1": 0.5168986083499006,
+        "test_micro_f1": 0.5200892857142857
+      },
+      {
+        "wording": "Conference",
+        "dev_type_f1": 0.496551724137931,
+        "test_type_f1": 0.5569620253164557,
+        "dev_micro_f1": 0.5262809917355373,
+        "test_micro_f1": 0.5194013303769403
+      },
+      {
+        "wording": "conferences",
+        "dev_type_f1": 0.4661654135338346,
+        "test_type_f1": 0.5479452054794521,
+        "dev_micro_f1": 0.5226296663363066,
+        "test_micro_f1": 0.5191986644407346
+      }
+    ],
+    "person": [
+      {
+        "wording": "person",
+        "dev_type_f1": 0.42857142857142855,
+        "test_type_f1": 0.5619047619047619,
+        "dev_micro_f1": 0.5267326732673266,
+        "test_micro_f1": 0.5205099778270509
+      },
+      {
+        "wording": "person name",
+        "dev_type_f1": 0.3837209302325581,
+        "test_type_f1": 0.5797101449275363,
+        "dev_micro_f1": 0.524297520661157,
+        "test_micro_f1": 0.521884583217173
+      },
+      {
+        "wording": "human",
+        "dev_type_f1": 0.3738317757009346,
+        "test_type_f1": 0.47619047619047616,
+        "dev_micro_f1": 0.541901291818483,
+        "test_micro_f1": 0.5298528186614829
+      },
+      {
+        "wording": "Person",
+        "dev_type_f1": 0.4114285714285714,
+        "test_type_f1": 0.5645933014354068,
+        "dev_micro_f1": 0.5239194985153415,
+        "test_micro_f1": 0.5207756232686981
+      },
+      {
+        "wording": "persons",
+        "dev_type_f1": 0.08,
+        "test_type_f1": 0.40875912408759124,
+        "dev_micro_f1": 0.5366666666666667,
+        "test_micro_f1": 0.5248464544946956
+      }
+    ],
+    "programlang": [
+      {
+        "wording": "programming language",
+        "dev_type_f1": 0.6236559139784946,
+        "test_type_f1": 0.7428571428571429,
+        "dev_micro_f1": 0.5267326732673266,
+        "test_micro_f1": 0.5205099778270509
+      },
+      {
+        "wording": "coding language",
+        "dev_type_f1": 0.6190476190476191,
+        "test_type_f1": 0.7328244274809161,
+        "dev_micro_f1": 0.5220830586684245,
+        "test_micro_f1": 0.5200775408474106
+      },
+      {
+        "wording": "language",
+        "dev_type_f1": 0.49056603773584906,
+        "test_type_f1": 0.7050359712230216,
+        "dev_micro_f1": 0.518324607329843,
+        "test_micro_f1": 0.5300606729178157
+      },
+      {
+        "wording": "programlang",
+        "dev_type_f1": 0.6585365853658536,
+        "test_type_f1": 0.7218045112781954,
+        "dev_micro_f1": 0.5237154150197628,
+        "test_micro_f1": 0.5202440377149196
+      },
+      {
+        "wording": "Programming Language",
+        "dev_type_f1": 0.5894736842105264,
+        "test_type_f1": 0.7210884353741497,
+        "dev_micro_f1": 0.5236051502145923,
+        "test_micro_f1": 0.522437673130194
+      },
+      {
+        "wording": "programming languages",
+        "dev_type_f1": 0.46875000000000006,
+        "test_type_f1": 0.6194690265486726,
+        "dev_micro_f1": 0.5160862354892205,
+        "test_micro_f1": 0.5175292153589316
+      }
+    ],
+    "country": [
+      {
+        "wording": "country",
+        "dev_type_f1": 0.8764044943820225,
+        "test_type_f1": 0.7999999999999999,
+        "dev_micro_f1": 0.5267326732673266,
+        "test_micro_f1": 0.5205099778270509
+      },
+      {
+        "wording": "nation",
+        "dev_type_f1": 0.7532467532467532,
+        "test_type_f1": 0.5797101449275363,
+        "dev_micro_f1": 0.5213364207740655,
+        "test_micro_f1": 0.5131907803387948
+      },
+      {
+        "wording": "sovereign state",
+        "dev_type_f1": 0.08510638297872342,
+        "test_type_f1": 0.044444444444444446,
+        "dev_micro_f1": 0.5009940357852883,
+        "test_micro_f1": 0.5020827547903359
+      },
+      {
+        "wording": "Country",
+        "dev_type_f1": 0.888888888888889,
+        "test_type_f1": 0.7999999999999999,
+        "dev_micro_f1": 0.5264200792602378,
+        "test_micro_f1": 0.52067721343325
+      },
+      {
+        "wording": "countries",
+        "dev_type_f1": 0.15384615384615385,
+        "test_type_f1": 0.0816326530612245,
+        "dev_micro_f1": 0.5041514447027565,
+        "test_micro_f1": 0.5031971087016959
+      }
+    ],
+    "location": [
+      {
+        "wording": "location",
+        "dev_type_f1": 0.5436893203883496,
+        "test_type_f1": 0.5940594059405941,
+        "dev_micro_f1": 0.5267326732673266,
+        "test_micro_f1": 0.5205099778270509
+      },
+      {
+        "wording": "place",
+        "dev_type_f1": 0.5894736842105263,
+        "test_type_f1": 0.6382978723404256,
+        "dev_micro_f1": 0.5317040951122853,
+        "test_micro_f1": 0.5245901639344261
+      },
+      {
+        "wording": "geographic location",
+        "dev_type_f1": 0.4556962025316456,
+        "test_type_f1": 0.5454545454545455,
+        "dev_micro_f1": 0.5211920529801324,
+        "test_micro_f1": 0.5234526783236192
+      },
+      {
+        "wording": "Location",
+        "dev_type_f1": 0.5283018867924528,
+        "test_type_f1": 0.6037735849056602,
+        "dev_micro_f1": 0.5253790375741595,
+        "test_micro_f1": 0.5202216066481994
+      },
+      {
+        "wording": "locations",
+        "dev_type_f1": 0.4927536231884058,
+        "test_type_f1": 0.4193548387096774,
+        "dev_micro_f1": 0.5274359827070169,
+        "test_micro_f1": 0.522809963616009
+      }
+    ],
+    "university": [
+      {
+        "wording": "university",
+        "dev_type_f1": 0.8518518518518519,
+        "test_type_f1": 0.8235294117647057,
+        "dev_micro_f1": 0.5267326732673266,
+        "test_micro_f1": 0.5205099778270509
+      },
+      {
+        "wording": "college",
+        "dev_type_f1": 0.09523809523809525,
+        "test_type_f1": 0.13333333333333333,
+        "dev_micro_f1": 0.49207397622192867,
+        "test_micro_f1": 0.5076029858999169
+      },
+      {
+        "wording": "academic institution",
+        "dev_type_f1": 0.8292682926829269,
+        "test_type_f1": 0.6575342465753424,
+        "dev_micro_f1": 0.5189831627599868,
+        "test_micro_f1": 0.5181260457334077
+      },
+      {
+        "wording": "University",
+        "dev_type_f1": 0.8623853211009174,
+        "test_type_f1": 0.8235294117647057,
+        "dev_micro_f1": 0.527841845140033,
+        "test_micro_f1": 0.522437673130194
+      },
+      {
+        "wording": "universities",
+        "dev_type_f1": 0.0,
+        "test_type_f1": 0.0,
+        "dev_micro_f1": 0.4929066314747608,
+        "test_micro_f1": 0.5062309609526446
+      }
+    ]
+  },
+  "dev": {
+    "default": {
+      "micro_p": 0.5388251181634031,
+      "micro_r": 0.5151710781149128,
+      "micro_f1": 0.5267326732673266,
+      "macro_f1": 0.5531889611420086,
+      "per_type_f1": {
+        "task": 0.4230769230769231,
+        "field": 0.6437994722955146,
+        "product": 0.41106719367588934,
+        "metrics": 0.5947955390334573,
+        "misc": 0.05982905982905983,
+        "algorithm": 0.5036319612590799,
+        "researcher": 0.6523605150214593,
+        "organisation": 0.607773851590106,
+        "conference": 0.5241379310344828,
+        "person": 0.42857142857142855,
+        "programlang": 0.6236559139784946,
+        "country": 0.8764044943820225,
+        "location": 0.5436893203883496,
+        "university": 0.8518518518518519
+      }
+    },
+    "best": {
+      "micro_p": 0.5682788051209103,
+      "micro_r": 0.5158166559070368,
+      "micro_f1": 0.5407783417935702,
+      "macro_f1": 0.5723841388449257,
+      "per_type_f1": {
+        "task": 0.4719101123595506,
+        "field": 0.6297376093294461,
+        "product": 0.4229390681003584,
+        "metrics": 0.5886792452830188,
+        "misc": 0.10526315789473684,
+        "algorithm": 0.551532033426184,
+        "researcher": 0.7086614173228347,
+        "organisation": 0.5963302752293578,
+        "conference": 0.4966442953020135,
+        "person": 0.4605263157894737,
+        "programlang": 0.6153846153846154,
+        "country": 0.9032258064516128,
+        "location": 0.607843137254902,
+        "university": 0.8547008547008546
+      }
+    }
+  },
+  "test": {
+    "default": {
+      "micro_p": 0.5219566425792107,
+      "micro_r": 0.5190713101160862,
+      "micro_f1": 0.5205099778270509,
+      "macro_f1": 0.562544058501382,
+      "per_type_f1": {
+        "task": 0.38274932614555257,
+        "field": 0.591792656587473,
+        "product": 0.359621451104101,
+        "metrics": 0.5722070844686648,
+        "misc": 0.05405405405405406,
+        "algorithm": 0.48484848484848486,
+        "researcher": 0.6863468634686347,
+        "organisation": 0.6356589147286822,
+        "conference": 0.5859872611464968,
+        "person": 0.5619047619047619,
+        "programlang": 0.7428571428571429,
+        "country": 0.7999999999999999,
+        "location": 0.5940594059405941,
+        "university": 0.8235294117647057
+      }
+    },
+    "best": {
+      "micro_p": 0.5526161081716637,
+      "micro_r": 0.5196241017136539,
+      "micro_f1": 0.5356125356125356,
+      "macro_f1": 0.5844256040242499,
+      "per_type_f1": {
+        "task": 0.4912280701754385,
+        "field": 0.5876543209876544,
+        "product": 0.41297935103244837,
+        "metrics": 0.5940054495912807,
+        "misc": 0.08450704225352113,
+        "algorithm": 0.46596858638743455,
+        "researcher": 0.6423357664233577,
+        "organisation": 0.6778523489932886,
+        "conference": 0.6124999999999999,
+        "person": 0.5674418604651164,
+        "programlang": 0.7014925373134329,
+        "country": 0.8510638297872342,
+        "location": 0.6262626262626263,
+        "university": 0.8666666666666666
+      }
+    }
+  },
+  "test_gain_ci95": [
+    -0.0040021753698562534,
+    0.035328166863189736
+  ],
+  "support": {
+    "dev": {
+      "task": 147,
+      "field": 178,
+      "product": 173,
+      "metrics": 147,
+      "misc": 180,
+      "algorithm": 178,
+      "researcher": 142,
+      "organisation": 94,
+      "conference": 89,
+      "person": 41,
+      "programlang": 35,
+      "country": 44,
+      "location": 42,
+      "university": 59
+    },
+    "test": {
+      "task": 219,
+      "field": 207,
+      "product": 198,
+      "metrics": 191,
+      "misc": 181,
+      "algorithm": 177,
+      "researcher": 160,
+      "organisation": 145,
+      "conference": 93,
+      "person": 67,
+      "programlang": 60,
+      "country": 44,
+      "location": 39,
+      "university": 28
+    }
+  },
+  "n_dev": 350,
+  "n_test": 431,
+  "n_label_sets": 60,
+  "meta": {
+    "data": "crossner_ai",
+    "labels": "preset:crossner_ai",
+    "auto": false,
+    "model": "urchade/gliner_large-v2.1",
+    "threshold": 0.5,
+    "seconds": 338.1,
+    "timestamp": "2026-11-15T02:03:28+00:00",
+    "versions": {
+      "labelsweep": "0.1.0",
+      "python": "3.12.13",
+      "gliner": "0.2.30",
+      "torch": "2.11.0+cu128",
+      "transformers": "5.22.2"
+    }
+  }
+}

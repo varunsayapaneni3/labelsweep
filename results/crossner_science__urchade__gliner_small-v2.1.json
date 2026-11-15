@@ -1,0 +1,873 @@
+{
+  "defaults": {
+    "misc": "miscellaneous",
+    "scientist": "scientist",
+    "astronomicalobject": "astronomical object",
+    "organisation": "organization",
+    "person": "person",
+    "academicjournal": "academic journal",
+    "location": "location",
+    "chemicalcompound": "chemical compound",
+    "protein": "protein",
+    "award": "award",
+    "university": "university",
+    "chemicalelement": "chemical element",
+    "enzyme": "enzyme",
+    "discipline": "discipline",
+    "event": "event",
+    "country": "country",
+    "theory": "theory"
+  },
+  "best_labels": {
+    "misc": "misc",
+    "scientist": "Scientist",
+    "astronomicalobject": "planet or star",
+    "organisation": "Organization",
+    "person": "Person",
+    "academicjournal": "academicjournal",
+    "location": "place",
+    "chemicalcompound": "Chemical Compound",
+    "protein": "Protein",
+    "award": "Award",
+    "university": "university",
+    "chemicalelement": "chemical element",
+    "enzyme": "Enzyme",
+    "discipline": "discipline",
+    "event": "events",
+    "country": "country",
+    "theory": "theory"
+  },
+  "per_type": {
+    "misc": [
+      {
+        "wording": "miscellaneous",
+        "dev_type_f1": 0.00554016620498615,
+        "test_type_f1": 0.007662835249042146,
+        "dev_micro_f1": 0.6319299708211754,
+        "test_micro_f1": 0.646865826282162
+      },
+      {
+        "wording": "other entity",
+        "dev_type_f1": 0.0,
+        "test_type_f1": 0.0,
+        "dev_micro_f1": 0.6289885297184568,
+        "test_micro_f1": 0.6450388265746333
+      },
+      {
+        "wording": "named entity",
+        "dev_type_f1": 0.005494505494505495,
+        "test_type_f1": 0.0,
+        "dev_micro_f1": 0.6299476439790576,
+        "test_micro_f1": 0.6469775474956823
+      },
+      {
+        "wording": "misc",
+        "dev_type_f1": 0.01652892561983471,
+        "test_type_f1": 0.0,
+        "dev_micro_f1": 0.6337910944652518,
+        "test_micro_f1": 0.6471298052059989
+      },
+      {
+        "wording": "Miscellaneous",
+        "dev_type_f1": 0.0,
+        "test_type_f1": 0.0038387715930902114,
+        "dev_micro_f1": 0.6307019370964382,
+        "test_micro_f1": 0.6448501550120566
+      }
+    ],
+    "scientist": [
+      {
+        "wording": "scientist",
+        "dev_type_f1": 0.8326639892904952,
+        "test_type_f1": 0.859344894026975,
+        "dev_micro_f1": 0.6319299708211754,
+        "test_micro_f1": 0.646865826282162
+      },
+      {
+        "wording": "researcher",
+        "dev_type_f1": 0.8124031007751937,
+        "test_type_f1": 0.8067415730337079,
+        "dev_micro_f1": 0.6151281516982704,
+        "test_micro_f1": 0.6277949776401788
+      },
+      {
+        "wording": "scholar",
+        "dev_type_f1": 0.8298755186721993,
+        "test_type_f1": 0.8512820512820513,
+        "dev_micro_f1": 0.6289649415692822,
+        "test_micro_f1": 0.6444136976824629
+      },
+      {
+        "wording": "Scientist",
+        "dev_type_f1": 0.8543956043956044,
+        "test_type_f1": 0.8590998043052839,
+        "dev_micro_f1": 0.6342988122525527,
+        "test_micro_f1": 0.6456611570247933
+      },
+      {
+        "wording": "scientists",
+        "dev_type_f1": 0.10989010989010989,
+        "test_type_f1": 0.06336633663366337,
+        "dev_micro_f1": 0.5242758908105855,
+        "test_micro_f1": 0.5134390075809787
+      }
+    ],
+    "astronomicalobject": [
+      {
+        "wording": "astronomical object",
+        "dev_type_f1": 0.7388724035608308,
+        "test_type_f1": 0.6934984520123839,
+        "dev_micro_f1": 0.6319299708211754,
+        "test_micro_f1": 0.646865826282162
+      },
+      {
+        "wording": "celestial body",
+        "dev_type_f1": 0.7576197387518142,
+        "test_type_f1": 0.6875981161695447,
+        "dev_micro_f1": 0.6409185803757829,
+        "test_micro_f1": 0.6435113184724383
+      },
+      {
+        "wording": "planet or star",
+        "dev_type_f1": 0.7813411078717202,
+        "test_type_f1": 0.7261146496815286,
+        "dev_micro_f1": 0.642692870583316,
+        "test_micro_f1": 0.6501815666609025
+      },
+      {
+        "wording": "astronomicalobject",
+        "dev_type_f1": 0.7354260089686098,
+        "test_type_f1": 0.6884735202492211,
+        "dev_micro_f1": 0.6324572382144347,
+        "test_micro_f1": 0.644927536231884
+      },
+      {
+        "wording": "Astronomical Object",
+        "dev_type_f1": 0.744927536231884,
+        "test_type_f1": 0.6716196136701337,
+        "dev_micro_f1": 0.6348080133555927,
+        "test_micro_f1": 0.6483043553107247
+      },
+      {
+        "wording": "astronomical objects",
+        "dev_type_f1": 0.5186500888099467,
+        "test_type_f1": 0.5009784735812133,
+        "dev_micro_f1": 0.5967130214917826,
+        "test_micro_f1": 0.6209902370990236
+      }
+    ],
+    "organisation": [
+      {
+        "wording": "organization",
+        "dev_type_f1": 0.6906474820143885,
+        "test_type_f1": 0.7106227106227107,
+        "dev_micro_f1": 0.6319299708211754,
+        "test_micro_f1": 0.646865826282162
+      },
+      {
+        "wording": "company",
+        "dev_type_f1": 0.06185567010309278,
+        "test_type_f1": 0.13999999999999999,
+        "dev_micro_f1": 0.5838911682142086,
+        "test_micro_f1": 0.6102473498233215
+      },
+      {
+        "wording": "institution",
+        "dev_type_f1": 0.6666666666666667,
+        "test_type_f1": 0.6330645161290323,
+        "dev_micro_f1": 0.6207186383694054,
+        "test_micro_f1": 0.6347222222222223
+      },
+      {
+        "wording": "organisation",
+        "dev_type_f1": 0.6728971962616822,
+        "test_type_f1": 0.6895238095238094,
+        "dev_micro_f1": 0.6254439105911844,
+        "test_micro_f1": 0.6443254448091207
+      },
+      {
+        "wording": "Organization",
+        "dev_type_f1": 0.6945898778359512,
+        "test_type_f1": 0.7097902097902099,
+        "dev_micro_f1": 0.6313815378203792,
+        "test_micro_f1": 0.6441612125387529
+      },
+      {
+        "wording": "organizations",
+        "dev_type_f1": 0.4584382871536524,
+        "test_type_f1": 0.5238095238095238,
+        "dev_micro_f1": 0.6026349341266468,
+        "test_micro_f1": 0.6284019539427773
+      }
+    ],
+    "person": [
+      {
+        "wording": "person",
+        "dev_type_f1": 0.6226415094339622,
+        "test_type_f1": 0.7459954233409611,
+        "dev_micro_f1": 0.6319299708211754,
+        "test_micro_f1": 0.646865826282162
+      },
+      {
+        "wording": "person name",
+        "dev_type_f1": 0.5517241379310345,
+        "test_type_f1": 0.7036144578313253,
+        "dev_micro_f1": 0.6248955722639933,
+        "test_micro_f1": 0.6419198895027624
+      },
+      {
+        "wording": "human",
+        "dev_type_f1": 0.2962962962962963,
+        "test_type_f1": 0.21568627450980396,
+        "dev_micro_f1": 0.6081109476780836,
+        "test_micro_f1": 0.6068821689259646
+      },
+      {
+        "wording": "Person",
+        "dev_type_f1": 0.6268656716417911,
+        "test_type_f1": 0.755939524838013,
+        "dev_micro_f1": 0.6331595411887383,
+        "test_micro_f1": 0.647911632723507
+      },
+      {
+        "wording": "persons",
+        "dev_type_f1": 0.2127659574468085,
+        "test_type_f1": 0.13740458015267176,
+        "dev_micro_f1": 0.6050349058599536,
+        "test_micro_f1": 0.6065803290164508
+      }
+    ],
+    "academicjournal": [
+      {
+        "wording": "academic journal",
+        "dev_type_f1": 0.8737201365187712,
+        "test_type_f1": 0.8586666666666667,
+        "dev_micro_f1": 0.6319299708211754,
+        "test_micro_f1": 0.646865826282162
+      },
+      {
+        "wording": "scientific journal",
+        "dev_type_f1": 0.8503401360544218,
+        "test_type_f1": 0.8333333333333334,
+        "dev_micro_f1": 0.6247134819754115,
+        "test_micro_f1": 0.6419327006039689
+      },
+      {
+        "wording": "journal",
+        "dev_type_f1": 0.8668941979522183,
+        "test_type_f1": 0.8387096774193549,
+        "dev_micro_f1": 0.6318418314255982,
+        "test_micro_f1": 0.6455500086073335
+      },
+      {
+        "wording": "academicjournal",
+        "dev_type_f1": 0.89419795221843,
+        "test_type_f1": 0.8571428571428571,
+        "dev_micro_f1": 0.6322150448010002,
+        "test_micro_f1": 0.6464402689191519
+      },
+      {
+        "wording": "Academic Journal",
+        "dev_type_f1": 0.8797250859106529,
+        "test_type_f1": 0.8540540540540541,
+        "dev_micro_f1": 0.631578947368421,
+        "test_micro_f1": 0.6451724137931034
+      },
+      {
+        "wording": "academic journals",
+        "dev_type_f1": 0.7953667953667954,
+        "test_type_f1": 0.7774294670846396,
+        "dev_micro_f1": 0.6200291484488861,
+        "test_micro_f1": 0.6376661488002763
+      }
+    ],
+    "location": [
+      {
+        "wording": "location",
+        "dev_type_f1": 0.6144578313253012,
+        "test_type_f1": 0.6666666666666667,
+        "dev_micro_f1": 0.6319299708211754,
+        "test_micro_f1": 0.646865826282162
+      },
+      {
+        "wording": "place",
+        "dev_type_f1": 0.6513157894736842,
+        "test_type_f1": 0.691588785046729,
+        "dev_micro_f1": 0.6354319180087848,
+        "test_micro_f1": 0.6458189357290947
+      },
+      {
+        "wording": "geographic location",
+        "dev_type_f1": 0.6241134751773049,
+        "test_type_f1": 0.5610561056105611,
+        "dev_micro_f1": 0.6326187473728457,
+        "test_micro_f1": 0.6377365040791528
+      },
+      {
+        "wording": "Location",
+        "dev_type_f1": 0.5815217391304348,
+        "test_type_f1": 0.6582278481012658,
+        "dev_micro_f1": 0.6234144312746933,
+        "test_micro_f1": 0.6415419032868697
+      },
+      {
+        "wording": "locations",
+        "dev_type_f1": 0.33519553072625696,
+        "test_type_f1": 0.27,
+        "dev_micro_f1": 0.6221365874545065,
+        "test_micro_f1": 0.6309292893669546
+      }
+    ],
+    "chemicalcompound": [
+      {
+        "wording": "chemical compound",
+        "dev_type_f1": 0.6356164383561643,
+        "test_type_f1": 0.6440677966101694,
+        "dev_micro_f1": 0.6319299708211754,
+        "test_micro_f1": 0.646865826282162
+      },
+      {
+        "wording": "compound",
+        "dev_type_f1": 0.3593220338983051,
+        "test_type_f1": 0.273972602739726,
+        "dev_micro_f1": 0.6078472078056881,
+        "test_micro_f1": 0.6247632168073015
+      },
+      {
+        "wording": "chemical substance",
+        "dev_type_f1": 0.6267806267806268,
+        "test_type_f1": 0.6983050847457628,
+        "dev_micro_f1": 0.6340753068441854,
+        "test_micro_f1": 0.6508018623900672
+      },
+      {
+        "wording": "chemicalcompound",
+        "dev_type_f1": 0.6406685236768802,
+        "test_type_f1": 0.6308243727598567,
+        "dev_micro_f1": 0.6341463414634146,
+        "test_micro_f1": 0.6440502841398312
+      },
+      {
+        "wording": "Chemical Compound",
+        "dev_type_f1": 0.6523809523809525,
+        "test_type_f1": 0.6757493188010899,
+        "dev_micro_f1": 0.6366479049405879,
+        "test_micro_f1": 0.6482472802624762
+      },
+      {
+        "wording": "chemical compounds",
+        "dev_type_f1": 0.0099009900990099,
+        "test_type_f1": 0.07058823529411765,
+        "dev_micro_f1": 0.5903689806128831,
+        "test_micro_f1": 0.6195483537321151
+      }
+    ],
+    "protein": [
+      {
+        "wording": "protein",
+        "dev_type_f1": 0.4816753926701571,
+        "test_type_f1": 0.5263157894736842,
+        "dev_micro_f1": 0.6319299708211754,
+        "test_micro_f1": 0.646865826282162
+      },
+      {
+        "wording": "gene product",
+        "dev_type_f1": 0.01639344262295082,
+        "test_type_f1": 0.06857142857142857,
+        "dev_micro_f1": 0.621897810218978,
+        "test_micro_f1": 0.6358903158625477
+      },
+      {
+        "wording": "biomolecule",
+        "dev_type_f1": 0.3764705882352941,
+        "test_type_f1": 0.2469135802469136,
+        "dev_micro_f1": 0.6289620882535737,
+        "test_micro_f1": 0.6309626313070433
+      },
+      {
+        "wording": "Protein",
+        "dev_type_f1": 0.5420560747663552,
+        "test_type_f1": 0.5388888888888889,
+        "dev_micro_f1": 0.6370463078848561,
+        "test_micro_f1": 0.6486486486486486
+      },
+      {
+        "wording": "proteins",
+        "dev_type_f1": 0.16923076923076924,
+        "test_type_f1": 0.20689655172413793,
+        "dev_micro_f1": 0.6202716823406479,
+        "test_micro_f1": 0.6306680512287989
+      }
+    ],
+    "award": [
+      {
+        "wording": "award",
+        "dev_type_f1": 0.45038167938931295,
+        "test_type_f1": 0.50187265917603,
+        "dev_micro_f1": 0.6319299708211754,
+        "test_micro_f1": 0.646865826282162
+      },
+      {
+        "wording": "prize",
+        "dev_type_f1": 0.45188284518828453,
+        "test_type_f1": 0.4765625,
+        "dev_micro_f1": 0.6320636249476769,
+        "test_micro_f1": 0.6474148365900052
+      },
+      {
+        "wording": "honor",
+        "dev_type_f1": 0.4017094017094017,
+        "test_type_f1": 0.4227642276422764,
+        "dev_micro_f1": 0.630894990568015,
+        "test_micro_f1": 0.643598615916955
+      },
+      {
+        "wording": "Award",
+        "dev_type_f1": 0.460377358490566,
+        "test_type_f1": 0.509090909090909,
+        "dev_micro_f1": 0.6335766423357665,
+        "test_micro_f1": 0.6465725111953152
+      },
+      {
+        "wording": "awards",
+        "dev_type_f1": 0.42372881355932207,
+        "test_type_f1": 0.453781512605042,
+        "dev_micro_f1": 0.6346878927524089,
+        "test_micro_f1": 0.647447030218826
+      }
+    ],
+    "university": [
+      {
+        "wording": "university",
+        "dev_type_f1": 0.7849056603773584,
+        "test_type_f1": 0.8208955223880597,
+        "dev_micro_f1": 0.6319299708211754,
+        "test_micro_f1": 0.646865826282162
+      },
+      {
+        "wording": "college",
+        "dev_type_f1": 0.626609442060086,
+        "test_type_f1": 0.8112449799196787,
+        "dev_micro_f1": 0.6271893244370309,
+        "test_micro_f1": 0.647271475296953
+      },
+      {
+        "wording": "academic institution",
+        "dev_type_f1": 0.5955056179775281,
+        "test_type_f1": 0.6823529411764706,
+        "dev_micro_f1": 0.5980330613098975,
+        "test_micro_f1": 0.6293609671848014
+      },
+      {
+        "wording": "University",
+        "dev_type_f1": 0.7777777777777778,
+        "test_type_f1": 0.8449612403100775,
+        "dev_micro_f1": 0.6310740354535976,
+        "test_micro_f1": 0.6476978789446456
+      },
+      {
+        "wording": "universities",
+        "dev_type_f1": 0.15894039735099338,
+        "test_type_f1": 0.325,
+        "dev_micro_f1": 0.6044854328233075,
+        "test_micro_f1": 0.6299513551077137
+      }
+    ],
+    "chemicalelement": [
+      {
+        "wording": "chemical element",
+        "dev_type_f1": 0.3103448275862069,
+        "test_type_f1": 0.6881720430107526,
+        "dev_micro_f1": 0.6319299708211754,
+        "test_micro_f1": 0.646865826282162
+      },
+      {
+        "wording": "element",
+        "dev_type_f1": 0.22641509433962265,
+        "test_type_f1": 0.7272727272727272,
+        "dev_micro_f1": 0.639551774227018,
+        "test_micro_f1": 0.6536216958462067
+      },
+      {
+        "wording": "periodic table element",
+        "dev_type_f1": 0.13333333333333333,
+        "test_type_f1": 0.5454545454545454,
+        "dev_micro_f1": 0.6378986866791745,
+        "test_micro_f1": 0.6464088397790055
+      },
+      {
+        "wording": "chemicalelement",
+        "dev_type_f1": 0.20512820512820512,
+        "test_type_f1": 0.6754966887417219,
+        "dev_micro_f1": 0.6344511560091648,
+        "test_micro_f1": 0.6456176673567977
+      },
+      {
+        "wording": "Chemical Element",
+        "dev_type_f1": 0.15053763440860216,
+        "test_type_f1": 0.4391891891891892,
+        "dev_micro_f1": 0.5954517003964114,
+        "test_micro_f1": 0.6166035136066138
+      },
+      {
+        "wording": "chemical elements",
+        "dev_type_f1": 0.0,
+        "test_type_f1": 0.3486238532110092,
+        "dev_micro_f1": 0.6341463414634146,
+        "test_micro_f1": 0.6395570167849108
+      }
+    ],
+    "enzyme": [
+      {
+        "wording": "enzyme",
+        "dev_type_f1": 0.5154639175257733,
+        "test_type_f1": 0.6257668711656442,
+        "dev_micro_f1": 0.6319299708211754,
+        "test_micro_f1": 0.646865826282162
+      },
+      {
+        "wording": "biological catalyst",
+        "dev_type_f1": 0.1851851851851852,
+        "test_type_f1": 0.02469135802469136,
+        "dev_micro_f1": 0.6299999999999999,
+        "test_micro_f1": 0.6402481047553411
+      },
+      {
+        "wording": "protein enzyme",
+        "dev_type_f1": 0.4952380952380952,
+        "test_type_f1": 0.625,
+        "dev_micro_f1": 0.6301312773494477,
+        "test_micro_f1": 0.6479310344827587
+      },
+      {
+        "wording": "Enzyme",
+        "dev_type_f1": 0.537037037037037,
+        "test_type_f1": 0.6428571428571429,
+        "dev_micro_f1": 0.637179219695389,
+        "test_micro_f1": 0.6544448287789691
+      },
+      {
+        "wording": "enzymes",
+        "dev_type_f1": 0.2153846153846154,
+        "test_type_f1": 0.3461538461538462,
+        "dev_micro_f1": 0.628559551028892,
+        "test_micro_f1": 0.6436702311141773
+      }
+    ],
+    "discipline": [
+      {
+        "wording": "discipline",
+        "dev_type_f1": 0.5233644859813085,
+        "test_type_f1": 0.548780487804878,
+        "dev_micro_f1": 0.6319299708211754,
+        "test_micro_f1": 0.646865826282162
+      },
+      {
+        "wording": "academic discipline",
+        "dev_type_f1": 0.46938775510204084,
+        "test_type_f1": 0.47560975609756095,
+        "dev_micro_f1": 0.6232247284878865,
+        "test_micro_f1": 0.6408973252804142
+      },
+      {
+        "wording": "scientific field",
+        "dev_type_f1": 0.49382716049382713,
+        "test_type_f1": 0.5503355704697986,
+        "dev_micro_f1": 0.6248169073027829,
+        "test_micro_f1": 0.6486580086580086
+      },
+      {
+        "wording": "Discipline",
+        "dev_type_f1": 0.5132743362831858,
+        "test_type_f1": 0.5492227979274612,
+        "dev_micro_f1": 0.6319749216300939,
+        "test_micro_f1": 0.642315644383184
+      },
+      {
+        "wording": "disciplines",
+        "dev_type_f1": 0.4150943396226415,
+        "test_type_f1": 0.37623762376237624,
+        "dev_micro_f1": 0.6313799621928167,
+        "test_micro_f1": 0.6440972222222222
+      }
+    ],
+    "event": [
+      {
+        "wording": "event",
+        "dev_type_f1": 0.39080459770114934,
+        "test_type_f1": 0.36697247706422015,
+        "dev_micro_f1": 0.6319299708211754,
+        "test_micro_f1": 0.646865826282162
+      },
+      {
+        "wording": "historical event",
+        "dev_type_f1": 0.37362637362637363,
+        "test_type_f1": 0.45652173913043476,
+        "dev_micro_f1": 0.6319950072810485,
+        "test_micro_f1": 0.6463456875649463
+      },
+      {
+        "wording": "occurrence",
+        "dev_type_f1": 0.13333333333333333,
+        "test_type_f1": 0.07142857142857142,
+        "dev_micro_f1": 0.629987400251995,
+        "test_micro_f1": 0.6449704142011833
+      },
+      {
+        "wording": "Event",
+        "dev_type_f1": 0.42,
+        "test_type_f1": 0.34426229508196726,
+        "dev_micro_f1": 0.6318635607321131,
+        "test_micro_f1": 0.6431520991052995
+      },
+      {
+        "wording": "events",
+        "dev_type_f1": 0.4999999999999999,
+        "test_type_f1": 0.5428571428571428,
+        "dev_micro_f1": 0.6344018437041692,
+        "test_micro_f1": 0.6491746307558645
+      }
+    ],
+    "country": [
+      {
+        "wording": "country",
+        "dev_type_f1": 0.7222222222222223,
+        "test_type_f1": 0.6133333333333334,
+        "dev_micro_f1": 0.6319299708211754,
+        "test_micro_f1": 0.646865826282162
+      },
+      {
+        "wording": "nation",
+        "dev_type_f1": 0.6666666666666667,
+        "test_type_f1": 0.5675675675675675,
+        "dev_micro_f1": 0.6301312773494477,
+        "test_micro_f1": 0.6456176673567977
+      },
+      {
+        "wording": "sovereign state",
+        "dev_type_f1": 0.0,
+        "test_type_f1": 0.0,
+        "dev_micro_f1": 0.6217291186937409,
+        "test_micro_f1": 0.6447140381282497
+      },
+      {
+        "wording": "Country",
+        "dev_type_f1": 0.65,
+        "test_type_f1": 0.6,
+        "dev_micro_f1": 0.629845769070446,
+        "test_micro_f1": 0.6455958549222799
+      },
+      {
+        "wording": "countries",
+        "dev_type_f1": 0.24242424242424243,
+        "test_type_f1": 0.4888888888888889,
+        "dev_micro_f1": 0.6236424394319131,
+        "test_micro_f1": 0.6465800865800865
+      }
+    ],
+    "theory": [
+      {
+        "wording": "theory",
+        "dev_type_f1": 0.6153846153846153,
+        "test_type_f1": 0.5,
+        "dev_micro_f1": 0.6319299708211754,
+        "test_micro_f1": 0.646865826282162
+      },
+      {
+        "wording": "scientific theory",
+        "dev_type_f1": 0.4210526315789474,
+        "test_type_f1": 0.3870967741935483,
+        "dev_micro_f1": 0.6229166666666667,
+        "test_micro_f1": 0.6436069523317846
+      },
+      {
+        "wording": "hypothesis",
+        "dev_type_f1": 0.25,
+        "test_type_f1": 0.08333333333333334,
+        "dev_micro_f1": 0.6304801670146137,
+        "test_micro_f1": 0.6434242319641008
+      },
+      {
+        "wording": "Theory",
+        "dev_type_f1": 0.47058823529411764,
+        "test_type_f1": 0.4615384615384615,
+        "dev_micro_f1": 0.6308109234938504,
+        "test_micro_f1": 0.6441495778045838
+      },
+      {
+        "wording": "theories",
+        "dev_type_f1": 0.0,
+        "test_type_f1": 0.3225806451612903,
+        "dev_micro_f1": 0.6306343906510851,
+        "test_micro_f1": 0.6449162782668738
+      }
+    ]
+  },
+  "dev": {
+    "default": {
+      "micro_p": 0.6707964601769911,
+      "micro_r": 0.5973207249802994,
+      "micro_f1": 0.6319299708211754,
+      "macro_f1": 0.5769827856201767,
+      "per_type_f1": {
+        "misc": 0.00554016620498615,
+        "scientist": 0.8326639892904952,
+        "astronomicalobject": 0.7388724035608308,
+        "organisation": 0.6906474820143885,
+        "person": 0.6226415094339622,
+        "academicjournal": 0.8737201365187712,
+        "location": 0.6144578313253012,
+        "chemicalcompound": 0.6356164383561643,
+        "protein": 0.4816753926701571,
+        "award": 0.45038167938931295,
+        "university": 0.7849056603773584,
+        "chemicalelement": 0.3103448275862069,
+        "enzyme": 0.5154639175257733,
+        "discipline": 0.5233644859813085,
+        "event": 0.39080459770114934,
+        "country": 0.7222222222222223,
+        "theory": 0.6153846153846153
+      }
+    },
+    "best": {
+      "micro_p": 0.7068345323741008,
+      "micro_r": 0.6193853427895981,
+      "micro_f1": 0.6602267954640907,
+      "macro_f1": 0.6043253566593921,
+      "per_type_f1": {
+        "misc": 0.011049723756906079,
+        "scientist": 0.8668555240793202,
+        "astronomicalobject": 0.7901591895803184,
+        "organisation": 0.7085514834205935,
+        "person": 0.6345609065155807,
+        "academicjournal": 0.89419795221843,
+        "location": 0.7007299270072992,
+        "chemicalcompound": 0.6504854368932039,
+        "protein": 0.47916666666666674,
+        "award": 0.4674329501915709,
+        "university": 0.7756653992395437,
+        "chemicalelement": 0.3125,
+        "enzyme": 0.5531914893617021,
+        "discipline": 0.5384615384615384,
+        "event": 0.5294117647058824,
+        "country": 0.6944444444444445,
+        "theory": 0.6666666666666666
+      }
+    }
+  },
+  "test": {
+    "default": {
+      "micro_p": 0.6931902294596595,
+      "micro_r": 0.6063450955001619,
+      "micro_f1": 0.646865826282162,
+      "macro_f1": 0.610507919330128,
+      "per_type_f1": {
+        "misc": 0.007662835249042146,
+        "scientist": 0.859344894026975,
+        "astronomicalobject": 0.6934984520123839,
+        "organisation": 0.7106227106227107,
+        "person": 0.7459954233409611,
+        "academicjournal": 0.8586666666666667,
+        "location": 0.6666666666666667,
+        "chemicalcompound": 0.6440677966101694,
+        "protein": 0.5263157894736842,
+        "award": 0.50187265917603,
+        "university": 0.8208955223880597,
+        "chemicalelement": 0.6881720430107526,
+        "enzyme": 0.6257668711656442,
+        "discipline": 0.548780487804878,
+        "event": 0.36697247706422015,
+        "country": 0.6133333333333334,
+        "theory": 0.5
+      }
+    },
+    "best": {
+      "micro_p": 0.7083333333333334,
+      "micro_r": 0.610877306571706,
+      "micro_f1": 0.6560055623153137,
+      "macro_f1": 0.6231516329605853,
+      "per_type_f1": {
+        "misc": 0.0,
+        "scientist": 0.865424430641822,
+        "astronomicalobject": 0.7530864197530865,
+        "organisation": 0.6993006993006992,
+        "person": 0.7294589178356712,
+        "academicjournal": 0.862533692722372,
+        "location": 0.6397306397306397,
+        "chemicalcompound": 0.6918604651162791,
+        "protein": 0.5342019543973942,
+        "award": 0.509090909090909,
+        "university": 0.8191881918819187,
+        "chemicalelement": 0.7672955974842768,
+        "enzyme": 0.6184210526315789,
+        "discipline": 0.5146198830409356,
+        "event": 0.5135135135135135,
+        "country": 0.6052631578947368,
+        "theory": 0.47058823529411764
+      }
+    }
+  },
+  "test_gain_ci95": [
+    -0.00583605443859736,
+    0.023858826836086866
+  ],
+  "support": {
+    "dev": {
+      "misc": 360,
+      "scientist": 328,
+      "astronomicalobject": 373,
+      "organisation": 278,
+      "person": 153,
+      "academicjournal": 149,
+      "location": 142,
+      "chemicalcompound": 193,
+      "protein": 101,
+      "award": 140,
+      "university": 138,
+      "chemicalelement": 23,
+      "enzyme": 48,
+      "discipline": 41,
+      "event": 36,
+      "country": 28,
+      "theory": 7
+    },
+    "test": {
+      "misc": 520,
+      "scientist": 471,
+      "astronomicalobject": 337,
+      "organisation": 273,
+      "person": 230,
+      "academicjournal": 180,
+      "location": 170,
+      "chemicalcompound": 160,
+      "protein": 156,
+      "award": 146,
+      "university": 130,
+      "chemicalelement": 85,
+      "enzyme": 80,
+      "discipline": 73,
+      "event": 31,
+      "country": 27,
+      "theory": 20
+    }
+  },
+  "n_dev": 450,
+  "n_test": 543,
+  "n_label_sets": 75,
+  "meta": {
+    "data": "crossner_science",
+    "labels": "preset:crossner_science",
+    "auto": false,
+    "model": "urchade/gliner_small-v2.1",
+    "threshold": 0.5,
+    "seconds": 159.4,
+    "timestamp": "2026-11-15T01:40:19+00:00",
+    "versions": {
+      "labelsweep": "0.1.0",
+      "python": "3.12.13",
+      "gliner": "0.2.30",
+      "torch": "2.11.0+cu128",
+      "transformers": "5.22.2"
+    }
+  }
+}

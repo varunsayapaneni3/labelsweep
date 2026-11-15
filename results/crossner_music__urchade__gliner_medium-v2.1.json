@@ -1,0 +1,679 @@
+{
+  "defaults": {
+    "musicalartist": "musical artist",
+    "musicgenre": "music genre",
+    "band": "band",
+    "location": "location",
+    "album": "album",
+    "award": "award",
+    "song": "song",
+    "organisation": "organization",
+    "misc": "miscellaneous",
+    "country": "country",
+    "person": "person",
+    "event": "event",
+    "musicalinstrument": "musical instrument"
+  },
+  "best_labels": {
+    "musicalartist": "musician",
+    "musicgenre": "Music Genre",
+    "band": "musical band",
+    "location": "place",
+    "album": "music album",
+    "award": "award",
+    "song": "track",
+    "organisation": "organizations",
+    "misc": "named entity",
+    "country": "country",
+    "person": "person name",
+    "event": "events",
+    "musicalinstrument": "musicalinstrument"
+  },
+  "per_type": {
+    "musicalartist": [
+      {
+        "wording": "musical artist",
+        "dev_type_f1": 0.8411214953271028,
+        "test_type_f1": 0.8419010669253152,
+        "dev_micro_f1": 0.7284138455686573,
+        "test_micro_f1": 0.7289175099662681
+      },
+      {
+        "wording": "musician",
+        "dev_type_f1": 0.8735868448098665,
+        "test_type_f1": 0.8488805970149254,
+        "dev_micro_f1": 0.7385844748858447,
+        "test_micro_f1": 0.7336191059399877
+      },
+      {
+        "wording": "singer",
+        "dev_type_f1": 0.747279322853688,
+        "test_type_f1": 0.7056179775280899,
+        "dev_micro_f1": 0.701313535122787,
+        "test_micro_f1": 0.6979166666666667
+      },
+      {
+        "wording": "musicalartist",
+        "dev_type_f1": 0.8365878725590955,
+        "test_type_f1": 0.8256704980842912,
+        "dev_micro_f1": 0.7261678693505508,
+        "test_micro_f1": 0.725882892524079
+      },
+      {
+        "wording": "Musical Artist",
+        "dev_type_f1": 0.8237623762376237,
+        "test_type_f1": 0.8003679852805887,
+        "dev_micro_f1": 0.7229742612011438,
+        "test_micro_f1": 0.7184912603495861
+      },
+      {
+        "wording": "musical artists",
+        "dev_type_f1": 0.08178438661710037,
+        "test_type_f1": 0.059859154929577475,
+        "dev_micro_f1": 0.5862595419847327,
+        "test_micro_f1": 0.6037213593725972
+      }
+    ],
+    "musicgenre": [
+      {
+        "wording": "music genre",
+        "dev_type_f1": 0.7880597014925371,
+        "test_type_f1": 0.7662337662337663,
+        "dev_micro_f1": 0.7284138455686573,
+        "test_micro_f1": 0.7289175099662681
+      },
+      {
+        "wording": "musical style",
+        "dev_type_f1": 0.7852941176470588,
+        "test_type_f1": 0.7577374599786553,
+        "dev_micro_f1": 0.7304843304843304,
+        "test_micro_f1": 0.7290233837689134
+      },
+      {
+        "wording": "genre of music",
+        "dev_type_f1": 0.783661119515885,
+        "test_type_f1": 0.7569367369589345,
+        "dev_micro_f1": 0.730732635585157,
+        "test_micro_f1": 0.7270216357219579
+      },
+      {
+        "wording": "musicgenre",
+        "dev_type_f1": 0.7874251497005987,
+        "test_type_f1": 0.7675675675675676,
+        "dev_micro_f1": 0.7309741248097413,
+        "test_micro_f1": 0.7306454085543461
+      },
+      {
+        "wording": "Music Genre",
+        "dev_type_f1": 0.7906976744186047,
+        "test_type_f1": 0.7661795407098122,
+        "dev_micro_f1": 0.7254455821008722,
+        "test_micro_f1": 0.7270505575072552
+      },
+      {
+        "wording": "music genres",
+        "dev_type_f1": 0.752,
+        "test_type_f1": 0.7379310344827585,
+        "dev_micro_f1": 0.7254601226993866,
+        "test_micro_f1": 0.7226164763961739
+      }
+    ],
+    "band": [
+      {
+        "wording": "band",
+        "dev_type_f1": 0.756972111553785,
+        "test_type_f1": 0.8048511576626239,
+        "dev_micro_f1": 0.7284138455686573,
+        "test_micro_f1": 0.7289175099662681
+      },
+      {
+        "wording": "music group",
+        "dev_type_f1": 0.7582562747688244,
+        "test_type_f1": 0.7913513513513514,
+        "dev_micro_f1": 0.7289648622981956,
+        "test_micro_f1": 0.7264367816091954
+      },
+      {
+        "wording": "musical band",
+        "dev_type_f1": 0.7657894736842105,
+        "test_type_f1": 0.8091603053435115,
+        "dev_micro_f1": 0.7314938154138915,
+        "test_micro_f1": 0.7296466973886329
+      },
+      {
+        "wording": "Band",
+        "dev_type_f1": 0.7600518806744488,
+        "test_type_f1": 0.7969762419006479,
+        "dev_micro_f1": 0.7278252611585945,
+        "test_micro_f1": 0.7264656360018368
+      },
+      {
+        "wording": "bands",
+        "dev_type_f1": 0.5864406779661018,
+        "test_type_f1": 0.6189111747851003,
+        "dev_micro_f1": 0.6944927536231884,
+        "test_micro_f1": 0.6880421313506815
+      }
+    ],
+    "location": [
+      {
+        "wording": "location",
+        "dev_type_f1": 0.7872340425531915,
+        "test_type_f1": 0.7919876733436054,
+        "dev_micro_f1": 0.7284138455686573,
+        "test_micro_f1": 0.7289175099662681
+      },
+      {
+        "wording": "place",
+        "dev_type_f1": 0.8206521739130436,
+        "test_type_f1": 0.8055987558320373,
+        "dev_micro_f1": 0.7296268088347296,
+        "test_micro_f1": 0.7312356101304681
+      },
+      {
+        "wording": "geographic location",
+        "dev_type_f1": 0.5049833887043189,
+        "test_type_f1": 0.46090534979423864,
+        "dev_micro_f1": 0.7083493651404386,
+        "test_micro_f1": 0.698001249219238
+      },
+      {
+        "wording": "Location",
+        "dev_type_f1": 0.7766497461928934,
+        "test_type_f1": 0.7988252569750367,
+        "dev_micro_f1": 0.7255460588793923,
+        "test_micro_f1": 0.7267166233369018
+      },
+      {
+        "wording": "locations",
+        "dev_type_f1": 0.741839762611276,
+        "test_type_f1": 0.7145299145299145,
+        "dev_micro_f1": 0.7246598965319027,
+        "test_micro_f1": 0.7218604651162791
+      }
+    ],
+    "album": [
+      {
+        "wording": "album",
+        "dev_type_f1": 0.6872427983539094,
+        "test_type_f1": 0.6759581881533102,
+        "dev_micro_f1": 0.7284138455686573,
+        "test_micro_f1": 0.7289175099662681
+      },
+      {
+        "wording": "music album",
+        "dev_type_f1": 0.7330677290836652,
+        "test_type_f1": 0.7052980132450332,
+        "dev_micro_f1": 0.7344761904761905,
+        "test_micro_f1": 0.7333231099524613
+      },
+      {
+        "wording": "record",
+        "dev_type_f1": 0.5966587112171837,
+        "test_type_f1": 0.5846774193548387,
+        "dev_micro_f1": 0.7166061532581693,
+        "test_micro_f1": 0.7217191097467383
+      },
+      {
+        "wording": "Album",
+        "dev_type_f1": 0.7286821705426356,
+        "test_type_f1": 0.7135842880523732,
+        "dev_micro_f1": 0.7311787072243346,
+        "test_micro_f1": 0.7339758298913874
+      },
+      {
+        "wording": "albums",
+        "dev_type_f1": 0.5721271393643033,
+        "test_type_f1": 0.5147679324894515,
+        "dev_micro_f1": 0.7156208277703605,
+        "test_micro_f1": 0.7134502923976608
+      }
+    ],
+    "award": [
+      {
+        "wording": "award",
+        "dev_type_f1": 0.6636363636363636,
+        "test_type_f1": 0.6283367556468172,
+        "dev_micro_f1": 0.7284138455686573,
+        "test_micro_f1": 0.7289175099662681
+      },
+      {
+        "wording": "prize",
+        "dev_type_f1": 0.3905325443786983,
+        "test_type_f1": 0.4285714285714286,
+        "dev_micro_f1": 0.6986849628359063,
+        "test_micro_f1": 0.709479182670149
+      },
+      {
+        "wording": "honor",
+        "dev_type_f1": 0.5378590078328982,
+        "test_type_f1": 0.48711943793911017,
+        "dev_micro_f1": 0.71436770614119,
+        "test_micro_f1": 0.7159317867567982
+      },
+      {
+        "wording": "Award",
+        "dev_type_f1": 0.6351351351351352,
+        "test_type_f1": 0.6032388663967612,
+        "dev_micro_f1": 0.7255796275180538,
+        "test_micro_f1": 0.7258533598652992
+      },
+      {
+        "wording": "awards",
+        "dev_type_f1": 0.6153846153846153,
+        "test_type_f1": 0.5847457627118645,
+        "dev_micro_f1": 0.727307545001915,
+        "test_micro_f1": 0.7288971041281578
+      }
+    ],
+    "song": [
+      {
+        "wording": "song",
+        "dev_type_f1": 0.7139588100686499,
+        "test_type_f1": 0.7063197026022304,
+        "dev_micro_f1": 0.7284138455686573,
+        "test_micro_f1": 0.7289175099662681
+      },
+      {
+        "wording": "track",
+        "dev_type_f1": 0.7733333333333334,
+        "test_type_f1": 0.7702127659574468,
+        "dev_micro_f1": 0.7424213536701622,
+        "test_micro_f1": 0.7382262996941895
+      },
+      {
+        "wording": "single",
+        "dev_type_f1": 0.620123203285421,
+        "test_type_f1": 0.6643952299829642,
+        "dev_micro_f1": 0.7092956671120444,
+        "test_micro_f1": 0.7141979102642901
+      },
+      {
+        "wording": "Song",
+        "dev_type_f1": 0.7149321266968326,
+        "test_type_f1": 0.7050092764378478,
+        "dev_micro_f1": 0.7284490960989534,
+        "test_micro_f1": 0.7288317256162915
+      },
+      {
+        "wording": "songs",
+        "dev_type_f1": 0.7185628742514971,
+        "test_type_f1": 0.7523809523809525,
+        "dev_micro_f1": 0.7396370582617001,
+        "test_micro_f1": 0.7406269207129685
+      }
+    ],
+    "organisation": [
+      {
+        "wording": "organization",
+        "dev_type_f1": 0.6923076923076923,
+        "test_type_f1": 0.6936170212765957,
+        "dev_micro_f1": 0.7284138455686573,
+        "test_micro_f1": 0.7289175099662681
+      },
+      {
+        "wording": "company",
+        "dev_type_f1": 0.22485207100591714,
+        "test_type_f1": 0.20967741935483872,
+        "dev_micro_f1": 0.7162555836084676,
+        "test_micro_f1": 0.7179808747452578
+      },
+      {
+        "wording": "institution",
+        "dev_type_f1": 0.6384615384615384,
+        "test_type_f1": 0.5263157894736842,
+        "dev_micro_f1": 0.7288428324697755,
+        "test_micro_f1": 0.7157927396835247
+      },
+      {
+        "wording": "organisation",
+        "dev_type_f1": 0.6967741935483871,
+        "test_type_f1": 0.686695278969957,
+        "dev_micro_f1": 0.7284490960989534,
+        "test_micro_f1": 0.7289461573861022
+      },
+      {
+        "wording": "Organization",
+        "dev_type_f1": 0.7182662538699691,
+        "test_type_f1": 0.6653465346534654,
+        "dev_micro_f1": 0.7272380952380952,
+        "test_micro_f1": 0.7191287007209693
+      },
+      {
+        "wording": "organizations",
+        "dev_type_f1": 0.721189591078067,
+        "test_type_f1": 0.6737967914438502,
+        "dev_micro_f1": 0.7342643964032907,
+        "test_micro_f1": 0.7354579207920792
+      }
+    ],
+    "misc": [
+      {
+        "wording": "miscellaneous",
+        "dev_type_f1": 0.0,
+        "test_type_f1": 0.0,
+        "dev_micro_f1": 0.7284138455686573,
+        "test_micro_f1": 0.7289175099662681
+      },
+      {
+        "wording": "other entity",
+        "dev_type_f1": 0.0,
+        "test_type_f1": 0.0,
+        "dev_micro_f1": 0.7336759946697126,
+        "test_micro_f1": 0.7302268546903741
+      },
+      {
+        "wording": "named entity",
+        "dev_type_f1": 0.014925373134328358,
+        "test_type_f1": 0.0,
+        "dev_micro_f1": 0.732940505607299,
+        "test_micro_f1": 0.7322387601657203
+      },
+      {
+        "wording": "misc",
+        "dev_type_f1": 0.0,
+        "test_type_f1": 0.0,
+        "dev_micro_f1": 0.7289328514361803,
+        "test_micro_f1": 0.72983747316774
+      },
+      {
+        "wording": "Miscellaneous",
+        "dev_type_f1": 0.0,
+        "test_type_f1": 0.045454545454545456,
+        "dev_micro_f1": 0.7240333586050038,
+        "test_micro_f1": 0.7292241643667586
+      }
+    ],
+    "country": [
+      {
+        "wording": "country",
+        "dev_type_f1": 0.8644688644688644,
+        "test_type_f1": 0.9272727272727272,
+        "dev_micro_f1": 0.7284138455686573,
+        "test_micro_f1": 0.7289175099662681
+      },
+      {
+        "wording": "nation",
+        "dev_type_f1": 0.8016194331983805,
+        "test_type_f1": 0.8299319727891157,
+        "dev_micro_f1": 0.723987064865893,
+        "test_micro_f1": 0.7212612888412675
+      },
+      {
+        "wording": "sovereign state",
+        "dev_type_f1": 0.3550295857988166,
+        "test_type_f1": 0.35175879396984927,
+        "dev_micro_f1": 0.7057246793030826,
+        "test_micro_f1": 0.6969650285010014
+      },
+      {
+        "wording": "Country",
+        "dev_type_f1": 0.8166089965397924,
+        "test_type_f1": 0.8843930635838151,
+        "dev_micro_f1": 0.7233314318311466,
+        "test_micro_f1": 0.72468208978091
+      },
+      {
+        "wording": "countries",
+        "dev_type_f1": 0.4519774011299435,
+        "test_type_f1": 0.4347826086956521,
+        "dev_micro_f1": 0.7069393997323646,
+        "test_micro_f1": 0.700107708878289
+      }
+    ],
+    "person": [
+      {
+        "wording": "person",
+        "dev_type_f1": 0.5625,
+        "test_type_f1": 0.538860103626943,
+        "dev_micro_f1": 0.7284138455686573,
+        "test_micro_f1": 0.7289175099662681
+      },
+      {
+        "wording": "person name",
+        "dev_type_f1": 0.5950413223140496,
+        "test_type_f1": 0.5875,
+        "dev_micro_f1": 0.7387661843107389,
+        "test_micro_f1": 0.7341422208570111
+      },
+      {
+        "wording": "human",
+        "dev_type_f1": 0.3191489361702128,
+        "test_type_f1": 0.3508771929824561,
+        "dev_micro_f1": 0.7332442237922474,
+        "test_micro_f1": 0.7326976314980006
+      },
+      {
+        "wording": "Person",
+        "dev_type_f1": 0.4842105263157895,
+        "test_type_f1": 0.49302325581395356,
+        "dev_micro_f1": 0.7195284274576916,
+        "test_micro_f1": 0.724566518336658
+      },
+      {
+        "wording": "persons",
+        "dev_type_f1": 0.20454545454545456,
+        "test_type_f1": 0.13725490196078433,
+        "dev_micro_f1": 0.7316886593995029,
+        "test_micro_f1": 0.7291248649482944
+      }
+    ],
+    "event": [
+      {
+        "wording": "event",
+        "dev_type_f1": 0.5561497326203209,
+        "test_type_f1": 0.4502617801047121,
+        "dev_micro_f1": 0.7284138455686573,
+        "test_micro_f1": 0.7289175099662681
+      },
+      {
+        "wording": "historical event",
+        "dev_type_f1": 0.5599999999999999,
+        "test_type_f1": 0.4563758389261745,
+        "dev_micro_f1": 0.729988510149368,
+        "test_micro_f1": 0.7311066646144374
+      },
+      {
+        "wording": "occurrence",
+        "dev_type_f1": 0.3149606299212599,
+        "test_type_f1": 0.29729729729729726,
+        "dev_micro_f1": 0.7218073903886655,
+        "test_micro_f1": 0.7247889485801996
+      },
+      {
+        "wording": "Event",
+        "dev_type_f1": 0.5099999999999999,
+        "test_type_f1": 0.4489795918367347,
+        "dev_micro_f1": 0.7245827010622155,
+        "test_micro_f1": 0.7279693486590039
+      },
+      {
+        "wording": "events",
+        "dev_type_f1": 0.588235294117647,
+        "test_type_f1": 0.44848484848484854,
+        "dev_micro_f1": 0.7288362316071088,
+        "test_micro_f1": 0.7306863650353955
+      }
+    ],
+    "musicalinstrument": [
+      {
+        "wording": "musical instrument",
+        "dev_type_f1": 0.5454545454545454,
+        "test_type_f1": 0.6666666666666666,
+        "dev_micro_f1": 0.7284138455686573,
+        "test_micro_f1": 0.7289175099662681
+      },
+      {
+        "wording": "instrument",
+        "dev_type_f1": 0.5432098765432098,
+        "test_type_f1": 0.6666666666666666,
+        "dev_micro_f1": 0.7247811191473162,
+        "test_micro_f1": 0.7282208588957055
+      },
+      {
+        "wording": "musicalinstrument",
+        "dev_type_f1": 0.5500000000000002,
+        "test_type_f1": 0.6896551724137931,
+        "dev_micro_f1": 0.726269735590641,
+        "test_micro_f1": 0.7273006134969324
+      },
+      {
+        "wording": "Musical Instrument",
+        "dev_type_f1": 0.4827586206896552,
+        "test_type_f1": 0.6268656716417911,
+        "dev_micro_f1": 0.7249572324653107,
+        "test_micro_f1": 0.7269661198834891
+      },
+      {
+        "wording": "musical instruments",
+        "dev_type_f1": 0.4444444444444444,
+        "test_type_f1": 0.5641025641025642,
+        "dev_micro_f1": 0.7293893129770993,
+        "test_micro_f1": 0.7286153846153847
+      }
+    ]
+  },
+  "dev": {
+    "default": {
+      "micro_p": 0.7425358666149671,
+      "micro_r": 0.7148189622993655,
+      "micro_f1": 0.7284138455686573,
+      "macro_f1": 0.6507004736797662,
+      "per_type_f1": {
+        "musicalartist": 0.8411214953271028,
+        "musicgenre": 0.7880597014925371,
+        "band": 0.756972111553785,
+        "location": 0.7872340425531915,
+        "album": 0.6872427983539094,
+        "award": 0.6636363636363636,
+        "song": 0.7139588100686499,
+        "organisation": 0.6923076923076923,
+        "misc": 0.0,
+        "country": 0.8644688644688644,
+        "person": 0.5625,
+        "event": 0.5561497326203209,
+        "musicalinstrument": 0.5454545454545454
+      }
+    },
+    "best": {
+      "micro_p": 0.7856860419137999,
+      "micro_r": 0.7416946621873833,
+      "micro_f1": 0.7630568356374808,
+      "macro_f1": 0.6805900776021547,
+      "per_type_f1": {
+        "musicalartist": 0.8577194752774976,
+        "musicgenre": 0.7871720116618075,
+        "band": 0.797452229299363,
+        "location": 0.8010899182561307,
+        "album": 0.8278388278388279,
+        "award": 0.6563192904656319,
+        "song": 0.7917888563049854,
+        "organisation": 0.7481481481481481,
+        "misc": 0.0,
+        "country": 0.8380281690140845,
+        "person": 0.6153846153846154,
+        "event": 0.5697674418604651,
+        "musicalinstrument": 0.5569620253164557
+      }
+    }
+  },
+  "test": {
+    "default": {
+      "micro_p": 0.7460765850596359,
+      "micro_r": 0.7125299760191847,
+      "micro_f1": 0.7289175099662681,
+      "macro_f1": 0.6532512776550241,
+      "per_type_f1": {
+        "musicalartist": 0.8419010669253152,
+        "musicgenre": 0.7662337662337663,
+        "band": 0.8048511576626239,
+        "location": 0.7919876733436054,
+        "album": 0.6759581881533102,
+        "award": 0.6283367556468172,
+        "song": 0.7063197026022304,
+        "organisation": 0.6936170212765957,
+        "misc": 0.0,
+        "country": 0.9272727272727272,
+        "person": 0.538860103626943,
+        "event": 0.4502617801047121,
+        "musicalinstrument": 0.6666666666666666
+      }
+    },
+    "best": {
+      "micro_p": 0.7740492170022372,
+      "micro_r": 0.7260191846522782,
+      "micro_f1": 0.7492652745552978,
+      "macro_f1": 0.6669378869453712,
+      "per_type_f1": {
+        "musicalartist": 0.8362627197039777,
+        "musicgenre": 0.7578288100208768,
+        "band": 0.825531914893617,
+        "location": 0.8126888217522658,
+        "album": 0.765891472868217,
+        "award": 0.6428571428571429,
+        "song": 0.7640449438202247,
+        "organisation": 0.6898395721925134,
+        "misc": 0.0,
+        "country": 0.9096209912536443,
+        "person": 0.5166666666666667,
+        "event": 0.4216867469879518,
+        "musicalinstrument": 0.7272727272727273
+      }
+    }
+  },
+  "test_gain_ci95": [
+    0.006889287559634916,
+    0.03455127767291577
+  ],
+  "support": {
+    "dev": {
+      "musicalartist": 472,
+      "musicgenre": 360,
+      "band": 402,
+      "location": 187,
+      "album": 282,
+      "award": 230,
+      "song": 177,
+      "organisation": 136,
+      "misc": 124,
+      "country": 130,
+      "person": 65,
+      "event": 72,
+      "musicalinstrument": 42
+    },
+    "test": {
+      "musicalartist": 515,
+      "musicgenre": 487,
+      "band": 462,
+      "location": 343,
+      "album": 332,
+      "award": 260,
+      "song": 227,
+      "organisation": 208,
+      "misc": 171,
+      "country": 160,
+      "person": 80,
+      "event": 69,
+      "musicalinstrument": 22
+    }
+  },
+  "n_dev": 380,
+  "n_test": 465,
+  "n_label_sets": 57,
+  "meta": {
+    "data": "crossner_music",
+    "labels": "preset:crossner_music",
+    "auto": false,
+    "model": "urchade/gliner_medium-v2.1",
+    "threshold": 0.5,
+    "seconds": 144.9,
+    "timestamp": "2026-11-15T01:48:54+00:00",
+    "versions": {
+      "labelsweep": "0.1.0",
+      "python": "3.12.13",
+      "gliner": "0.2.30",
+      "torch": "2.11.0+cu128",
+      "transformers": "5.22.2"
+    }
+  }
+}

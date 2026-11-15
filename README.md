@@ -17,8 +17,12 @@ labels and data:
 
 ## Install
 
+Not on PyPI yet. Install from source:
+
 ```bash
-pip install "labelsweep[gliner]"   # from source for now: pip install -e ".[gliner]"
+git clone https://github.com/<your-username>/labelsweep
+cd labelsweep
+pip install -e ".[gliner]"        # or: uv sync --extra gliner
 ```
 
 ## Use
@@ -50,7 +54,10 @@ Data file (JSONL, token spans, end-exclusive):
 
 ## Results
 
-RESULTS_PENDING
+**Study in progress.** The pre-registered grid (6 benchmarks x 3 GLiNER v2.1 sizes) is running; finished
+runs are in [`results/`](results/) and can be summarised with `labelsweep report results --summary`.
+Hypothesis verdicts and figures will be added when all 18 runs are complete
+(see [pre-registration](docs/PREREGISTRATION.md) and [plan](docs/PROJECT_PLAN.md), phase 3).
 
 ## How it works
 

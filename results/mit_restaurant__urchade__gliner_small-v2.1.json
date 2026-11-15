@@ -1,0 +1,433 @@
+{
+  "defaults": {
+    "Amenity": "amenity",
+    "Cuisine": "cuisine",
+    "Dish": "dish",
+    "Hours": "hours",
+    "Location": "location",
+    "Price": "price",
+    "Rating": "rating",
+    "Restaurant_Name": "restaurant name"
+  },
+  "best_labels": {
+    "Amenity": "amenity",
+    "Cuisine": "Cuisine",
+    "Dish": "food item",
+    "Hours": "time",
+    "Location": "area",
+    "Price": "Price",
+    "Rating": "Rating",
+    "Restaurant_Name": "restaurant name"
+  },
+  "per_type": {
+    "Amenity": [
+      {
+        "wording": "amenity",
+        "dev_type_f1": 0.182370820668693,
+        "test_type_f1": 0.2318840579710145,
+        "dev_micro_f1": 0.21057471264367814,
+        "test_micro_f1": 0.23510830324909746
+      },
+      {
+        "wording": "restaurant feature",
+        "dev_type_f1": 0.0,
+        "test_type_f1": 0.0037453183520599247,
+        "dev_micro_f1": 0.17977528089887643,
+        "test_micro_f1": 0.20699235934244037
+      },
+      {
+        "wording": "service",
+        "dev_type_f1": 0.13333333333333333,
+        "test_type_f1": 0.1166936790923825,
+        "dev_micro_f1": 0.2146430195543429,
+        "test_micro_f1": 0.23121645796064402
+      },
+      {
+        "wording": "Amenity",
+        "dev_type_f1": 0.0,
+        "test_type_f1": 0.022222222222222223,
+        "dev_micro_f1": 0.19469026548672566,
+        "test_micro_f1": 0.2167168326001389
+      },
+      {
+        "wording": "amenities",
+        "dev_type_f1": 0.027027027027027025,
+        "test_type_f1": 0.022181146025878007,
+        "dev_micro_f1": 0.18802619270346116,
+        "test_micro_f1": 0.21484555094513602
+      }
+    ],
+    "Cuisine": [
+      {
+        "wording": "cuisine",
+        "dev_type_f1": 0.09042553191489361,
+        "test_type_f1": 0.1291248206599713,
+        "dev_micro_f1": 0.21057471264367814,
+        "test_micro_f1": 0.23510830324909746
+      },
+      {
+        "wording": "type of food",
+        "dev_type_f1": 0.022922636103151862,
+        "test_type_f1": 0.05993690851735016,
+        "dev_micro_f1": 0.22141888838680526,
+        "test_micro_f1": 0.2453714030782958
+      },
+      {
+        "wording": "food style",
+        "dev_type_f1": 0.0,
+        "test_type_f1": 0.010909090909090908,
+        "dev_micro_f1": 0.2319236016371078,
+        "test_micro_f1": 0.2607327489323443
+      },
+      {
+        "wording": "Cuisine",
+        "dev_type_f1": 0.1105769230769231,
+        "test_type_f1": 0.1508034610630408,
+        "dev_micro_f1": 0.2060717571297148,
+        "test_micro_f1": 0.22514752610077166
+      },
+      {
+        "wording": "cuisines",
+        "dev_type_f1": 0.006153846153846154,
+        "test_type_f1": 0.0035778175313059034,
+        "dev_micro_f1": 0.22558459422283353,
+        "test_micro_f1": 0.26038159371492703
+      }
+    ],
+    "Dish": [
+      {
+        "wording": "dish",
+        "dev_type_f1": 0.32000000000000006,
+        "test_type_f1": 0.3252032520325203,
+        "dev_micro_f1": 0.21057471264367814,
+        "test_micro_f1": 0.23510830324909746
+      },
+      {
+        "wording": "food item",
+        "dev_type_f1": 0.5408163265306122,
+        "test_type_f1": 0.6063157894736843,
+        "dev_micro_f1": 0.23497997329773032,
+        "test_micro_f1": 0.27237185056472635
+      },
+      {
+        "wording": "meal",
+        "dev_type_f1": 0.10526315789473684,
+        "test_type_f1": 0.0972972972972973,
+        "dev_micro_f1": 0.19634703196347034,
+        "test_micro_f1": 0.22077630693291453
+      },
+      {
+        "wording": "Dish",
+        "dev_type_f1": 0.5108695652173914,
+        "test_type_f1": 0.509009009009009,
+        "dev_micro_f1": 0.23185759926973987,
+        "test_micro_f1": 0.2580935251798561
+      },
+      {
+        "wording": "dishes",
+        "dev_type_f1": 0.0,
+        "test_type_f1": 0.0404040404040404,
+        "dev_micro_f1": 0.19132057862809146,
+        "test_micro_f1": 0.2185567010309278
+      }
+    ],
+    "Hours": [
+      {
+        "wording": "hours",
+        "dev_type_f1": 0.14054054054054055,
+        "test_type_f1": 0.20467836257309943,
+        "dev_micro_f1": 0.21057471264367814,
+        "test_micro_f1": 0.23510830324909746
+      },
+      {
+        "wording": "opening hours",
+        "dev_type_f1": 0.04580152671755725,
+        "test_type_f1": 0.06779661016949153,
+        "dev_micro_f1": 0.20722433460076045,
+        "test_micro_f1": 0.22511627906976744
+      },
+      {
+        "wording": "time",
+        "dev_type_f1": 0.17674418604651165,
+        "test_type_f1": 0.23728813559322035,
+        "dev_micro_f1": 0.21415770609318996,
+        "test_micro_f1": 0.2373848179025889
+      },
+      {
+        "wording": "Hours",
+        "dev_type_f1": 0.14444444444444446,
+        "test_type_f1": 0.1828908554572271,
+        "dev_micro_f1": 0.2153419593345656,
+        "test_micro_f1": 0.23534756928668793
+      },
+      {
+        "wording": "hourses",
+        "dev_type_f1": 0.046153846153846156,
+        "test_type_f1": 0.08403361344537816,
+        "dev_micro_f1": 0.20709219858156028,
+        "test_micro_f1": 0.23066234367762856
+      }
+    ],
+    "Location": [
+      {
+        "wording": "location",
+        "dev_type_f1": 0.23324396782841825,
+        "test_type_f1": 0.23687943262411348,
+        "dev_micro_f1": 0.21057471264367814,
+        "test_micro_f1": 0.23510830324909746
+      },
+      {
+        "wording": "place",
+        "dev_type_f1": 0.08333333333333334,
+        "test_type_f1": 0.0863013698630137,
+        "dev_micro_f1": 0.1417979610750695,
+        "test_micro_f1": 0.16556743234023197
+      },
+      {
+        "wording": "area",
+        "dev_type_f1": 0.28355957767722473,
+        "test_type_f1": 0.2770870337477797,
+        "dev_micro_f1": 0.22485768500948766,
+        "test_micro_f1": 0.24502517381922798
+      },
+      {
+        "wording": "Location",
+        "dev_type_f1": 0.2450592885375494,
+        "test_type_f1": 0.25604551920341395,
+        "dev_micro_f1": 0.2180826896865061,
+        "test_micro_f1": 0.24708520179372198
+      },
+      {
+        "wording": "locations",
+        "dev_type_f1": 0.08495575221238938,
+        "test_type_f1": 0.18544366899302095,
+        "dev_micro_f1": 0.1828009828009828,
+        "test_micro_f1": 0.23841059602649003
+      }
+    ],
+    "Price": [
+      {
+        "wording": "price",
+        "dev_type_f1": 0.04545454545454546,
+        "test_type_f1": 0.0495049504950495,
+        "dev_micro_f1": 0.21057471264367814,
+        "test_micro_f1": 0.23510830324909746
+      },
+      {
+        "wording": "price range",
+        "dev_type_f1": 0.0,
+        "test_type_f1": 0.04469273743016759,
+        "dev_micro_f1": 0.21004145555043763,
+        "test_micro_f1": 0.2371344366356835
+      },
+      {
+        "wording": "cost",
+        "dev_type_f1": 0.0,
+        "test_type_f1": 0.03314917127071823,
+        "dev_micro_f1": 0.20631970260223048,
+        "test_micro_f1": 0.23276059564719356
+      },
+      {
+        "wording": "Price",
+        "dev_type_f1": 0.11650485436893206,
+        "test_type_f1": 0.07174887892376682,
+        "dev_micro_f1": 0.2100954979536153,
+        "test_micro_f1": 0.23254769921436588
+      },
+      {
+        "wording": "prices",
+        "dev_type_f1": 0.0,
+        "test_type_f1": 0.0,
+        "dev_micro_f1": 0.20794824399260628,
+        "test_micro_f1": 0.23352337514253138
+      }
+    ],
+    "Rating": [
+      {
+        "wording": "rating",
+        "dev_type_f1": 0.1111111111111111,
+        "test_type_f1": 0.16521739130434782,
+        "dev_micro_f1": 0.21057471264367814,
+        "test_micro_f1": 0.23510830324909746
+      },
+      {
+        "wording": "review rating",
+        "dev_type_f1": 0.09090909090909091,
+        "test_type_f1": 0.10958904109589042,
+        "dev_micro_f1": 0.21260929590427982,
+        "test_micro_f1": 0.23316764572977855
+      },
+      {
+        "wording": "quality",
+        "dev_type_f1": 0.0,
+        "test_type_f1": 0.047393364928909956,
+        "dev_micro_f1": 0.2010189902732747,
+        "test_micro_f1": 0.22278018717187853
+      },
+      {
+        "wording": "Rating",
+        "dev_type_f1": 0.18556701030927836,
+        "test_type_f1": 0.19327731092436976,
+        "dev_micro_f1": 0.2113970588235294,
+        "test_micro_f1": 0.23529411764705885
+      },
+      {
+        "wording": "ratings",
+        "dev_type_f1": 0.09090909090909091,
+        "test_type_f1": 0.10958904109589042,
+        "dev_micro_f1": 0.21164510166358594,
+        "test_micro_f1": 0.23449216087252897
+      }
+    ],
+    "Restaurant_Name": [
+      {
+        "wording": "restaurant name",
+        "dev_type_f1": 0.48341232227488157,
+        "test_type_f1": 0.4206773618538324,
+        "dev_micro_f1": 0.21057471264367814,
+        "test_micro_f1": 0.23510830324909746
+      },
+      {
+        "wording": "restaurant",
+        "dev_type_f1": 0.3114035087719298,
+        "test_type_f1": 0.32773938795656465,
+        "dev_micro_f1": 0.21907216494845358,
+        "test_micro_f1": 0.24260738182603067
+      },
+      {
+        "wording": "business name",
+        "dev_type_f1": 0.3402061855670103,
+        "test_type_f1": 0.31721470019342357,
+        "dev_micro_f1": 0.1927386822052891,
+        "test_micro_f1": 0.2174490699734278
+      },
+      {
+        "wording": "Restaurant Name",
+        "dev_type_f1": 0.4732142857142857,
+        "test_type_f1": 0.41975308641975306,
+        "dev_micro_f1": 0.22304832713754646,
+        "test_micro_f1": 0.24579202213511644
+      },
+      {
+        "wording": "restaurant names",
+        "dev_type_f1": 0.13333333333333333,
+        "test_type_f1": 0.15720524017467247,
+        "dev_micro_f1": 0.18439068918302146,
+        "test_micro_f1": 0.20641054785178448
+      }
+    ]
+  },
+  "dev": {
+    "default": {
+      "micro_p": 0.4024604569420035,
+      "micro_r": 0.14259028642590285,
+      "micro_f1": 0.21057471264367814,
+      "macro_f1": 0.20081985497413546,
+      "per_type_f1": {
+        "Amenity": 0.182370820668693,
+        "Cuisine": 0.09042553191489361,
+        "Dish": 0.32000000000000006,
+        "Hours": 0.14054054054054055,
+        "Location": 0.23324396782841825,
+        "Price": 0.04545454545454546,
+        "Rating": 0.1111111111111111,
+        "Restaurant_Name": 0.48341232227488157
+      }
+    },
+    "best": {
+      "micro_p": 0.43278688524590164,
+      "micro_r": 0.1643835616438356,
+      "micro_f1": 0.23826714801444043,
+      "macro_f1": 0.23540684843280585,
+      "per_type_f1": {
+        "Amenity": 0.138801261829653,
+        "Cuisine": 0.14349775784753366,
+        "Dish": 0.3855421686746988,
+        "Hours": 0.169811320754717,
+        "Location": 0.2809667673716012,
+        "Price": 0.09900990099009901,
+        "Rating": 0.17021276595744683,
+        "Restaurant_Name": 0.4954128440366973
+      }
+    }
+  },
+  "test": {
+    "default": {
+      "micro_p": 0.4067135050741608,
+      "micro_r": 0.1653443351317042,
+      "micro_f1": 0.23510830324909746,
+      "macro_f1": 0.2203962036892436,
+      "per_type_f1": {
+        "Amenity": 0.2318840579710145,
+        "Cuisine": 0.1291248206599713,
+        "Dish": 0.3252032520325203,
+        "Hours": 0.20467836257309943,
+        "Location": 0.23687943262411348,
+        "Price": 0.0495049504950495,
+        "Rating": 0.16521739130434782,
+        "Restaurant_Name": 0.4206773618538324
+      }
+    },
+    "best": {
+      "micro_p": 0.4694041867954911,
+      "micro_r": 0.1850206283719454,
+      "micro_f1": 0.2654222626906442,
+      "macro_f1": 0.2541879988518771,
+      "per_type_f1": {
+        "Amenity": 0.1763727121464226,
+        "Cuisine": 0.18599033816425123,
+        "Dish": 0.49131513647642683,
+        "Hours": 0.22388059701492538,
+        "Location": 0.27992957746478875,
+        "Price": 0.06422018348623854,
+        "Rating": 0.18723404255319148,
+        "Restaurant_Name": 0.42456140350877186
+      }
+    }
+  },
+  "test_gain_ci95": [
+    0.017926641703565893,
+    0.0422146241935982
+  ],
+  "support": {
+    "dev": {
+      "Amenity": 292,
+      "Cuisine": 307,
+      "Dish": 122,
+      "Hours": 119,
+      "Location": 462,
+      "Price": 75,
+      "Rating": 83,
+      "Restaurant_Name": 146
+    },
+    "test": {
+      "Amenity": 533,
+      "Cuisine": 532,
+      "Dish": 288,
+      "Hours": 212,
+      "Location": 812,
+      "Price": 171,
+      "Rating": 201,
+      "Restaurant_Name": 402
+    }
+  },
+  "n_dev": 760,
+  "n_test": 1521,
+  "n_label_sets": 34,
+  "meta": {
+    "data": "mit_restaurant",
+    "labels": "preset:mit_restaurant",
+    "auto": false,
+    "model": "urchade/gliner_small-v2.1",
+    "threshold": 0.5,
+    "seconds": 72.0,
+    "timestamp": "2026-11-15T01:41:37+00:00",
+    "versions": {
+      "labelsweep": "0.1.0",
+      "python": "3.12.13",
+      "gliner": "0.2.30",
+      "torch": "2.11.0+cu128",
+      "transformers": "5.22.2"
+    }
+  }
+}

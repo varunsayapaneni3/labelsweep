@@ -1,0 +1,627 @@
+{
+  "defaults": {
+    "writer": "writer",
+    "book": "book",
+    "misc": "miscellaneous",
+    "literarygenre": "literary genre",
+    "person": "person",
+    "award": "award",
+    "poem": "poem",
+    "organisation": "organization",
+    "country": "country",
+    "location": "location",
+    "magazine": "magazine",
+    "event": "event"
+  },
+  "best_labels": {
+    "writer": "Writer",
+    "book": "Book",
+    "misc": "miscellaneous",
+    "literarygenre": "literary genre",
+    "person": "Person",
+    "award": "Award",
+    "poem": "Poem",
+    "organisation": "Organization",
+    "country": "nation",
+    "location": "Location",
+    "magazine": "Magazine",
+    "event": "event"
+  },
+  "per_type": {
+    "writer": [
+      {
+        "wording": "writer",
+        "dev_type_f1": 0.8064228367528993,
+        "test_type_f1": 0.8396143733567046,
+        "dev_micro_f1": 0.6316856780735107,
+        "test_micro_f1": 0.6450048496605237
+      },
+      {
+        "wording": "author",
+        "dev_type_f1": 0.7776744186046513,
+        "test_type_f1": 0.8127853881278538,
+        "dev_micro_f1": 0.6194465600406195,
+        "test_micro_f1": 0.6335433834222006
+      },
+      {
+        "wording": "novelist",
+        "dev_type_f1": 0.6564215148188803,
+        "test_type_f1": 0.7347781217750257,
+        "dev_micro_f1": 0.5746192893401016,
+        "test_micro_f1": 0.5979282100698626
+      },
+      {
+        "wording": "Writer",
+        "dev_type_f1": 0.8067375886524822,
+        "test_type_f1": 0.8405545927209706,
+        "dev_micro_f1": 0.6329435688866294,
+        "test_micro_f1": 0.6488845780795344
+      },
+      {
+        "wording": "writers",
+        "dev_type_f1": 0.1685575364667747,
+        "test_type_f1": 0.1312,
+        "dev_micro_f1": 0.4611503531786075,
+        "test_micro_f1": 0.45640163343742496
+      }
+    ],
+    "book": [
+      {
+        "wording": "book",
+        "dev_type_f1": 0.746031746031746,
+        "test_type_f1": 0.7462686567164178,
+        "dev_micro_f1": 0.6316856780735107,
+        "test_micro_f1": 0.6450048496605237
+      },
+      {
+        "wording": "literary work",
+        "dev_type_f1": 0.7208931419457735,
+        "test_type_f1": 0.7223587223587223,
+        "dev_micro_f1": 0.6223350253807107,
+        "test_micro_f1": 0.6383808827115338
+      },
+      {
+        "wording": "novel",
+        "dev_type_f1": 0.7257525083612041,
+        "test_type_f1": 0.7298335467349552,
+        "dev_micro_f1": 0.6259580991313234,
+        "test_micro_f1": 0.643397608005858
+      },
+      {
+        "wording": "Book",
+        "dev_type_f1": 0.7470238095238095,
+        "test_type_f1": 0.7594936708860759,
+        "dev_micro_f1": 0.6306760847628659,
+        "test_micro_f1": 0.6494571773220749
+      },
+      {
+        "wording": "books",
+        "dev_type_f1": 0.5900383141762452,
+        "test_type_f1": 0.6403508771929824,
+        "dev_micro_f1": 0.5998970133882595,
+        "test_micro_f1": 0.6195866141732284
+      }
+    ],
+    "misc": [
+      {
+        "wording": "miscellaneous",
+        "dev_type_f1": 0.009216589861751152,
+        "test_type_f1": 0.0,
+        "dev_micro_f1": 0.6316856780735107,
+        "test_micro_f1": 0.6450048496605237
+      },
+      {
+        "wording": "other entity",
+        "dev_type_f1": 0.0,
+        "test_type_f1": 0.0,
+        "dev_micro_f1": 0.6297893935549354,
+        "test_micro_f1": 0.644034917555771
+      },
+      {
+        "wording": "named entity",
+        "dev_type_f1": 0.0,
+        "test_type_f1": 0.0,
+        "dev_micro_f1": 0.630561912026443,
+        "test_micro_f1": 0.6467589220684633
+      },
+      {
+        "wording": "misc",
+        "dev_type_f1": 0.0,
+        "test_type_f1": 0.0,
+        "dev_micro_f1": 0.6308588801621484,
+        "test_micro_f1": 0.6487533284918907
+      },
+      {
+        "wording": "Miscellaneous",
+        "dev_type_f1": 0.009216589861751152,
+        "test_type_f1": 0.0,
+        "dev_micro_f1": 0.6312325993419388,
+        "test_micro_f1": 0.6447876447876448
+      }
+    ],
+    "literarygenre": [
+      {
+        "wording": "literary genre",
+        "dev_type_f1": 0.20105820105820105,
+        "test_type_f1": 0.26771653543307083,
+        "dev_micro_f1": 0.6316856780735107,
+        "test_micro_f1": 0.6450048496605237
+      },
+      {
+        "wording": "genre",
+        "dev_type_f1": 0.17777777777777778,
+        "test_type_f1": 0.2549800796812749,
+        "dev_micro_f1": 0.6302968789647297,
+        "test_micro_f1": 0.6475132786093675
+      },
+      {
+        "wording": "literary form",
+        "dev_type_f1": 0.19387755102040816,
+        "test_type_f1": 0.282442748091603,
+        "dev_micro_f1": 0.6267071320182093,
+        "test_micro_f1": 0.6465183752417796
+      },
+      {
+        "wording": "literarygenre",
+        "dev_type_f1": 0.15873015873015872,
+        "test_type_f1": 0.24291497975708504,
+        "dev_micro_f1": 0.6286149162861492,
+        "test_micro_f1": 0.6476885644768856
+      },
+      {
+        "wording": "Literary Genre",
+        "dev_type_f1": 0.18957345971563982,
+        "test_type_f1": 0.27142857142857146,
+        "dev_micro_f1": 0.6293494704992436,
+        "test_micro_f1": 0.6428915662650602
+      },
+      {
+        "wording": "literary genres",
+        "dev_type_f1": 0.09815950920245399,
+        "test_type_f1": 0.19469026548672566,
+        "dev_micro_f1": 0.63015792154865,
+        "test_micro_f1": 0.6441419543023821
+      }
+    ],
+    "person": [
+      {
+        "wording": "person",
+        "dev_type_f1": 0.5425531914893617,
+        "test_type_f1": 0.527536231884058,
+        "dev_micro_f1": 0.6316856780735107,
+        "test_micro_f1": 0.6450048496605237
+      },
+      {
+        "wording": "person name",
+        "dev_type_f1": 0.5060240963855422,
+        "test_type_f1": 0.48028673835125446,
+        "dev_micro_f1": 0.6297331639135959,
+        "test_micro_f1": 0.6455850158112381
+      },
+      {
+        "wording": "human",
+        "dev_type_f1": 0.0380952380952381,
+        "test_type_f1": 0.12871287128712874,
+        "dev_micro_f1": 0.6130783148100285,
+        "test_micro_f1": 0.6284032376747608
+      },
+      {
+        "wording": "Person",
+        "dev_type_f1": 0.5620253164556962,
+        "test_type_f1": 0.5425531914893617,
+        "dev_micro_f1": 0.6333417914234966,
+        "test_micro_f1": 0.6432380029083857
+      },
+      {
+        "wording": "persons",
+        "dev_type_f1": 0.09442060085836909,
+        "test_type_f1": 0.09950248756218906,
+        "dev_micro_f1": 0.6076863554294558,
+        "test_micro_f1": 0.6288812222769837
+      }
+    ],
+    "award": [
+      {
+        "wording": "award",
+        "dev_type_f1": 0.5783132530120482,
+        "test_type_f1": 0.635036496350365,
+        "dev_micro_f1": 0.6316856780735107,
+        "test_micro_f1": 0.6450048496605237
+      },
+      {
+        "wording": "prize",
+        "dev_type_f1": 0.5614035087719298,
+        "test_type_f1": 0.61003861003861,
+        "dev_micro_f1": 0.6307496823379924,
+        "test_micro_f1": 0.6447848285922685
+      },
+      {
+        "wording": "honor",
+        "dev_type_f1": 0.5420560747663551,
+        "test_type_f1": 0.5461847389558233,
+        "dev_micro_f1": 0.6292134831460674,
+        "test_micro_f1": 0.6405451448040886
+      },
+      {
+        "wording": "Award",
+        "dev_type_f1": 0.6015625,
+        "test_type_f1": 0.6181818181818182,
+        "dev_micro_f1": 0.6313387423935092,
+        "test_micro_f1": 0.6475728155339806
+      },
+      {
+        "wording": "awards",
+        "dev_type_f1": 0.5963302752293578,
+        "test_type_f1": 0.5725806451612903,
+        "dev_micro_f1": 0.6324917112981381,
+        "test_micro_f1": 0.6423712342079689
+      }
+    ],
+    "poem": [
+      {
+        "wording": "poem",
+        "dev_type_f1": 0.38333333333333336,
+        "test_type_f1": 0.37362637362637363,
+        "dev_micro_f1": 0.6316856780735107,
+        "test_micro_f1": 0.6450048496605237
+      },
+      {
+        "wording": "poetry",
+        "dev_type_f1": 0.3589743589743589,
+        "test_type_f1": 0.37209302325581395,
+        "dev_micro_f1": 0.6304292608585218,
+        "test_micro_f1": 0.6491866957999515
+      },
+      {
+        "wording": "verse work",
+        "dev_type_f1": 0.24528301886792456,
+        "test_type_f1": 0.3125,
+        "dev_micro_f1": 0.6264937706585303,
+        "test_micro_f1": 0.6448326055312955
+      },
+      {
+        "wording": "Poem",
+        "dev_type_f1": 0.3918918918918919,
+        "test_type_f1": 0.419047619047619,
+        "dev_micro_f1": 0.6241134751773051,
+        "test_micro_f1": 0.64175506268081
+      },
+      {
+        "wording": "poems",
+        "dev_type_f1": 0.13483146067415733,
+        "test_type_f1": 0.18705035971223025,
+        "dev_micro_f1": 0.6266836086404066,
+        "test_micro_f1": 0.6413809871140287
+      }
+    ],
+    "organisation": [
+      {
+        "wording": "organization",
+        "dev_type_f1": 0.6148148148148149,
+        "test_type_f1": 0.6666666666666666,
+        "dev_micro_f1": 0.6316856780735107,
+        "test_micro_f1": 0.6450048496605237
+      },
+      {
+        "wording": "company",
+        "dev_type_f1": 0.37419354838709673,
+        "test_type_f1": 0.40522875816993464,
+        "dev_micro_f1": 0.6228571428571428,
+        "test_micro_f1": 0.6388957357653439
+      },
+      {
+        "wording": "institution",
+        "dev_type_f1": 0.6008583690987125,
+        "test_type_f1": 0.5599999999999999,
+        "dev_micro_f1": 0.6341338783852837,
+        "test_micro_f1": 0.6408193123628383
+      },
+      {
+        "wording": "organisation",
+        "dev_type_f1": 0.6194029850746269,
+        "test_type_f1": 0.6639004149377594,
+        "dev_micro_f1": 0.631525595539787,
+        "test_micro_f1": 0.6445198836081474
+      },
+      {
+        "wording": "Organization",
+        "dev_type_f1": 0.6277372262773723,
+        "test_type_f1": 0.6590038314176244,
+        "dev_micro_f1": 0.6300329197265131,
+        "test_micro_f1": 0.6434446057087566
+      },
+      {
+        "wording": "organizations",
+        "dev_type_f1": 0.5595854922279793,
+        "test_type_f1": 0.5810055865921788,
+        "dev_micro_f1": 0.6275523391057122,
+        "test_micro_f1": 0.6450503561778432
+      }
+    ],
+    "country": [
+      {
+        "wording": "country",
+        "dev_type_f1": 0.7142857142857143,
+        "test_type_f1": 0.7162790697674419,
+        "dev_micro_f1": 0.6316856780735107,
+        "test_micro_f1": 0.6450048496605237
+      },
+      {
+        "wording": "nation",
+        "dev_type_f1": 0.7739463601532567,
+        "test_type_f1": 0.6968325791855203,
+        "dev_micro_f1": 0.639635073492144,
+        "test_micro_f1": 0.642770646645677
+      },
+      {
+        "wording": "sovereign state",
+        "dev_type_f1": 0.22666666666666668,
+        "test_type_f1": 0.2601626016260163,
+        "dev_micro_f1": 0.6009701302016849,
+        "test_micro_f1": 0.6194647201946472
+      },
+      {
+        "wording": "Country",
+        "dev_type_f1": 0.7137809187279153,
+        "test_type_f1": 0.6752136752136753,
+        "dev_micro_f1": 0.6323268206039077,
+        "test_micro_f1": 0.6426846933848382
+      },
+      {
+        "wording": "countries",
+        "dev_type_f1": 0.23287671232876714,
+        "test_type_f1": 0.17857142857142858,
+        "dev_micro_f1": 0.6037735849056604,
+        "test_micro_f1": 0.6168498168498169
+      }
+    ],
+    "location": [
+      {
+        "wording": "location",
+        "dev_type_f1": 0.6082949308755761,
+        "test_type_f1": 0.6346153846153847,
+        "dev_micro_f1": 0.6316856780735107,
+        "test_micro_f1": 0.6450048496605237
+      },
+      {
+        "wording": "place",
+        "dev_type_f1": 0.5741626794258374,
+        "test_type_f1": 0.5929648241206029,
+        "dev_micro_f1": 0.6314988587370023,
+        "test_micro_f1": 0.6451925405667231
+      },
+      {
+        "wording": "geographic location",
+        "dev_type_f1": 0.5108695652173914,
+        "test_type_f1": 0.5536723163841808,
+        "dev_micro_f1": 0.6284111196123437,
+        "test_micro_f1": 0.6387128230131643
+      },
+      {
+        "wording": "Location",
+        "dev_type_f1": 0.6290322580645161,
+        "test_type_f1": 0.6519823788546256,
+        "dev_micro_f1": 0.6335529650278763,
+        "test_micro_f1": 0.6462733673221656
+      },
+      {
+        "wording": "locations",
+        "dev_type_f1": 0.36986301369863017,
+        "test_type_f1": 0.3308270676691729,
+        "dev_micro_f1": 0.623744527427247,
+        "test_micro_f1": 0.6352651048088779
+      }
+    ],
+    "magazine": [
+      {
+        "wording": "magazine",
+        "dev_type_f1": 0.6993006993006993,
+        "test_type_f1": 0.7796610169491526,
+        "dev_micro_f1": 0.6316856780735107,
+        "test_micro_f1": 0.6450048496605237
+      },
+      {
+        "wording": "periodical",
+        "dev_type_f1": 0.6301369863013698,
+        "test_type_f1": 0.7719298245614035,
+        "dev_micro_f1": 0.6253478370857577,
+        "test_micro_f1": 0.6385454545454545
+      },
+      {
+        "wording": "publication",
+        "dev_type_f1": 0.45045045045045046,
+        "test_type_f1": 0.5111111111111111,
+        "dev_micro_f1": 0.6015384615384616,
+        "test_micro_f1": 0.6211637613552664
+      },
+      {
+        "wording": "Magazine",
+        "dev_type_f1": 0.7123287671232877,
+        "test_type_f1": 0.8099173553719009,
+        "dev_micro_f1": 0.6279187817258883,
+        "test_micro_f1": 0.6477162293488824
+      },
+      {
+        "wording": "magazines",
+        "dev_type_f1": 0.6129032258064515,
+        "test_type_f1": 0.7422680412371133,
+        "dev_micro_f1": 0.6249048947501902,
+        "test_micro_f1": 0.6408947240457087
+      }
+    ],
+    "event": [
+      {
+        "wording": "event",
+        "dev_type_f1": 0.6466165413533834,
+        "test_type_f1": 0.6938775510204082,
+        "dev_micro_f1": 0.6316856780735107,
+        "test_micro_f1": 0.6450048496605237
+      },
+      {
+        "wording": "historical event",
+        "dev_type_f1": 0.5492957746478873,
+        "test_type_f1": 0.6055045871559632,
+        "dev_micro_f1": 0.6271529888551165,
+        "test_micro_f1": 0.6450833534670211
+      },
+      {
+        "wording": "occurrence",
+        "dev_type_f1": 0.2650602409638554,
+        "test_type_f1": 0.2950819672131148,
+        "dev_micro_f1": 0.6216216216216215,
+        "test_micro_f1": 0.6393601551139118
+      },
+      {
+        "wording": "Event",
+        "dev_type_f1": 0.6344827586206897,
+        "test_type_f1": 0.5378151260504201,
+        "dev_micro_f1": 0.6287591609805409,
+        "test_micro_f1": 0.6438223938223938
+      },
+      {
+        "wording": "events",
+        "dev_type_f1": 0.5740740740740741,
+        "test_type_f1": 0.6666666666666666,
+        "dev_micro_f1": 0.6294597349643221,
+        "test_micro_f1": 0.6443311483369749
+      }
+    ]
+  },
+  "dev": {
+    "default": {
+      "micro_p": 0.6865013774104683,
+      "micro_r": 0.5849765258215962,
+      "micro_f1": 0.6316856780735107,
+      "macro_f1": 0.545853487680794,
+      "per_type_f1": {
+        "writer": 0.8064228367528993,
+        "book": 0.746031746031746,
+        "misc": 0.009216589861751152,
+        "literarygenre": 0.20105820105820105,
+        "person": 0.5425531914893617,
+        "award": 0.5783132530120482,
+        "poem": 0.38333333333333336,
+        "organisation": 0.6148148148148149,
+        "country": 0.7142857142857143,
+        "location": 0.6082949308755761,
+        "magazine": 0.6993006993006993,
+        "event": 0.6466165413533834
+      }
+    },
+    "best": {
+      "micro_p": 0.6893897746014294,
+      "micro_r": 0.5887323943661972,
+      "micro_f1": 0.6350974930362117,
+      "macro_f1": 0.5530283674829487,
+      "per_type_f1": {
+        "writer": 0.7996272134203168,
+        "book": 0.7360248447204968,
+        "misc": 0.009259259259259259,
+        "literarygenre": 0.1827956989247312,
+        "person": 0.5742574257425743,
+        "award": 0.5783132530120482,
+        "poem": 0.35593220338983045,
+        "organisation": 0.6307692307692307,
+        "country": 0.766798418972332,
+        "location": 0.6615969581749049,
+        "magazine": 0.6986301369863014,
+        "event": 0.6423357664233577
+      }
+    }
+  },
+  "test": {
+    "default": {
+      "micro_p": 0.7158234660925726,
+      "micro_r": 0.5869373345101501,
+      "micro_f1": 0.6450048496605237,
+      "macro_f1": 0.5734081963655037,
+      "per_type_f1": {
+        "writer": 0.8396143733567046,
+        "book": 0.7462686567164178,
+        "misc": 0.0,
+        "literarygenre": 0.26771653543307083,
+        "person": 0.527536231884058,
+        "award": 0.635036496350365,
+        "poem": 0.37362637362637363,
+        "organisation": 0.6666666666666666,
+        "country": 0.7162790697674419,
+        "location": 0.6346153846153847,
+        "magazine": 0.7796610169491526,
+        "event": 0.6938775510204082
+      }
+    },
+    "best": {
+      "micro_p": 0.689545934530095,
+      "micro_r": 0.5763459841129744,
+      "micro_f1": 0.6278846153846155,
+      "macro_f1": 0.5514235952225867,
+      "per_type_f1": {
+        "writer": 0.8246097337006427,
+        "book": 0.7464114832535886,
+        "misc": 0.0,
+        "literarygenre": 0.248,
+        "person": 0.5333333333333333,
+        "award": 0.5963636363636363,
+        "poem": 0.34285714285714286,
+        "organisation": 0.6502057613168725,
+        "country": 0.6605504587155964,
+        "location": 0.6042553191489363,
+        "magazine": 0.8067226890756302,
+        "event": 0.6037735849056605
+      }
+    }
+  },
+  "test_gain_ci95": [
+    -0.029548972780413907,
+    -0.004303851444628415
+  ],
+  "support": {
+    "dev": {
+      "writer": 544,
+      "book": 336,
+      "misc": 212,
+      "literarygenre": 152,
+      "person": 194,
+      "award": 124,
+      "poem": 79,
+      "organisation": 115,
+      "country": 127,
+      "location": 111,
+      "magazine": 71,
+      "event": 65
+    },
+    "test": {
+      "writer": 567,
+      "book": 418,
+      "misc": 239,
+      "literarygenre": 194,
+      "person": 175,
+      "award": 141,
+      "poem": 120,
+      "organisation": 110,
+      "country": 101,
+      "location": 99,
+      "magazine": 57,
+      "event": 45
+    }
+  },
+  "n_dev": 400,
+  "n_test": 416,
+  "n_label_sets": 52,
+  "meta": {
+    "data": "crossner_literature",
+    "labels": "preset:crossner_literature",
+    "auto": false,
+    "model": "urchade/gliner_small-v2.1",
+    "threshold": 0.5,
+    "seconds": 82.4,
+    "timestamp": "2026-11-15T01:34:06+00:00",
+    "versions": {
+      "labelsweep": "0.1.0",
+      "python": "3.12.13",
+      "gliner": "0.2.30",
+      "torch": "2.11.0+cu128",
+      "transformers": "5.22.2"
+    }
+  }
+}
