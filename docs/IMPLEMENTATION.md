@@ -99,7 +99,9 @@ which gives 1 + 58 + 1 = 60 passes, matching `n_label_sets` in the result file.
 
 **Interface for predictors** (`sweep.Predictor`):
 ```python
-def predict(self, token_lists: list[list[str]], labels: list[str]) -> list[list[tuple[int, int, str]]]:
+def predict(
+    self, token_lists: list[list[str]], labels: list[str]
+) -> list[list[tuple[int, int, str]]]:
     """Spans per example, typed with the label wording that was passed in."""
 ```
 Spans whose label is not in the current set are dropped.
@@ -204,8 +206,7 @@ GPU RTX 5070 12 GB. Inference is deterministic for fixed inputs: an independent 
 1. Implement the `Predictor` interface in `predictors.py`:
 ```python
 class MyPredictor:
-    def __init__(self, model: str, threshold: float = 0.5):
-        ...
+    def __init__(self, model: str, threshold: float = 0.5): ...
     def predict(self, token_lists, labels):
         # return [[(start_tok, end_tok, label_wording), ...] for each example]
         ...
