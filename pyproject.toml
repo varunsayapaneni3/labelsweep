@@ -1,0 +1,49 @@
+[project]
+name = "labelsweep"
+version = "0.1.0"
+description = "Measure how much zero-shot NER accuracy depends on the wording of entity labels, and pick wordings that hold up on held-out data."
+readme = "README.md"
+authors = [{ name = "Varun Sayapaneni" }]
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+dependencies = ["pyarrow>=15", "pyyaml>=6"]
+keywords = ["ner", "zero-shot", "gliner", "evaluation", "nlp"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Text Processing :: Linguistic",
+]
+
+[project.optional-dependencies]
+gliner = ["gliner>=0.2.30", "torch>=2.7"]
+
+[project.scripts]
+labelsweep = "labelsweep.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.uv]
+# CUDA wheels on Windows for local runs (RTX 50xx needs cu128+); other platforms use PyPI.
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu128", marker = "sys_platform == 'win32'" }]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[build-system]
+requires = ["uv_build>=0.13.8,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.ruff]
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
