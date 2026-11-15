@@ -129,3 +129,25 @@ def markdown(res: dict, min_support: int = 30) -> str:
         "(dev gain > test gain = selection overfit).",
     ]
     return "\n".join(lines) + "\n"
+
+
+def summary_table(results: list[dict], min_support: int = 30) -> str:
+    """One row per (dataset, model) result: the numbers behind H1-H4."""
+    lines = [
+        "| data | model | median spread | max spread | casing/plural spread | micro-F1 default | "
+        "test gain (95% CI) | dev gain |",
+        "|---|---|---|---|---|---|---|---|",
+    ]
+    for res in sorted(
+        results, key=lambda r: (r["meta"].get("data", ""), r["meta"].get("model", ""))
+    ):
+        sm = summarize(res, min_support)
+        td, tb = res["test"]["default"]["micro_f1"], res["test"]["best"]["micro_f1"]
+        dd, db = res["dev"]["default"]["micro_f1"], res["dev"]["best"]["micro_f1"]
+        lo, hi = res["test_gain_ci95"]
+        lines.append(
+            f"| {res['meta'].get('data')} | {res['meta'].get('model', '').split('/')[-1]} "
+            f"| {_pct(sm['median_spread'])} | {_pct(sm['max_spread'])} | {_pct(sm['median_trivial_spread'])} "
+            f"| {_pct(td)} | {_pct(tb - td)} [{_pct(lo)}, {_pct(hi)}] | {_pct(db - dd)} |"
+        )
+    return "\n".join(lines) + "\n"

@@ -13,7 +13,7 @@ from pathlib import Path
 from . import __version__
 from .config import list_presets, load_labels
 from .data import BENCHMARKS, load_hf, load_jsonl
-from .report import markdown, to_dict
+from .report import markdown, summary_table, to_dict
 from .sweep import run_sweep
 
 
@@ -101,8 +101,12 @@ def cmd_run(args) -> int:
 
 
 def cmd_report(args) -> int:
-    for p in args.results:
-        print(markdown(json.loads(Path(p).read_text(encoding="utf-8"))))
+    results = [json.loads(Path(p).read_text(encoding="utf-8")) for p in args.results]
+    if args.summary:
+        print(summary_table(results, args.min_support))
+        return 0
+    for res in results:
+        print(markdown(res, args.min_support))
     return 0
 
 
@@ -139,6 +143,13 @@ def main(argv: list[str] | None = None) -> int:
 
     p = sub.add_parser("report", help="print Markdown tables for result JSON files")
     p.add_argument("results", nargs="+")
+    p.add_argument("--summary", action="store_true", help="one row per result file")
+    p.add_argument(
+        "--min-support",
+        type=int,
+        default=30,
+        help="min gold test spans for a type to count",
+    )
     p.set_defaults(fn=cmd_report)
 
     s = sub.add_parser("presets", help="list bundled label presets")

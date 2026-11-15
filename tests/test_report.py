@@ -48,3 +48,24 @@ def test_summarize_separates_trivial_spread_and_filters_small_types():
     assert (
         abs(s["micro_range"] - 0.15) < 1e-9
     )  # micro range spans all types, small ones included
+
+
+def test_summary_table_has_one_row_per_result():
+    from labelsweep.report import summary_table
+
+    base = _res(
+        {"country": [("country", 0.8, 0.5), ("nation", 0.4, 0.45)]}, {"country": 100}
+    )
+    for name, model in (("crossner_ai", "m/small"), ("crossner_ai", "m/large")):
+        base_i = dict(base)
+        base_i["meta"] = {"data": name, "model": model}
+        base_i["test"] = {"default": {"micro_f1": 0.5}, "best": {"micro_f1": 0.52}}
+        base_i["dev"] = {"default": {"micro_f1": 0.5}, "best": {"micro_f1": 0.6}}
+        base_i["test_gain_ci95"] = [-0.01, 0.05]
+        if name == "crossner_ai" and model == "m/small":
+            first = base_i
+        else:
+            second = base_i
+    table = summary_table([first, second])
+    assert table.count("| crossner_ai |") == 2
+    assert "| large |" in table and "40.0" in table

@@ -8,9 +8,19 @@ import subprocess
 import sys
 from pathlib import Path
 
-DATA = ["crossner_ai", "crossner_literature", "crossner_music", "crossner_politics", "crossner_science",
-        "mit_restaurant"]
-MODELS = ["urchade/gliner_small-v2.1", "urchade/gliner_medium-v2.1", "urchade/gliner_large-v2.1"]
+DATA = [
+    "crossner_ai",
+    "crossner_literature",
+    "crossner_music",
+    "crossner_politics",
+    "crossner_science",
+    "mit_restaurant",
+]
+MODELS = [
+    "urchade/gliner_small-v2.1",
+    "urchade/gliner_medium-v2.1",
+    "urchade/gliner_large-v2.1",
+]
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--models", nargs="+", default=MODELS)
@@ -24,6 +34,18 @@ for m in a.models:
             print("skip", out, flush=True)
             continue
         print("RUN", d, m, flush=True)
-        rc = subprocess.call([sys.executable, "-m", "labelsweep", "run", d, "--model", m, "--out", str(out)],
-                             stdout=subprocess.DEVNULL)
+        rc = subprocess.call(
+            [
+                sys.executable,
+                "-m",
+                "labelsweep",
+                "run",
+                d,
+                "--model",
+                m,
+                "--out",
+                str(out),
+            ],
+            stdout=subprocess.DEVNULL,
+        )
         print("done", d, m, "rc", rc, flush=True)
